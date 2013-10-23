@@ -58,5 +58,27 @@ namespace PracticeSession.Controllers
             return View();
         }
 
+        [HttpGet]
+        public ActionResult CreatePosts()
+        {
+            var blog= from blog in db.Blogs
+                       select blog;
+
+            var post = new Post()
+            {
+                Blog = blog
+            };
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult CreatePosts(Post post)
+        {
+            db.Posts.Add(post);
+            db.SaveChanges();
+
+            return View();
+        }
+
     }
 }
