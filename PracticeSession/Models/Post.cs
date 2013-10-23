@@ -5,11 +5,13 @@ using System.Web;
 
 namespace PracticeSession.Models
 {
-    public class Blog
+    public class Post
     {
-        public int BlogId { get; set; }
-        public string Name { get; set; }
+        public int PostId { get; set; }
+        public string Title { get; set; }
+        public string Content { get; set; }
 
-        public virtual List<Post> Posts { get; set; }
+        public int BlogId { get; set; }
+        public virtual Blog Blog { get; set; }
     }
 }

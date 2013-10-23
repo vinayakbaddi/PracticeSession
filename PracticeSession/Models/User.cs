@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.ComponentModel.DataAnnotations;
 
 namespace PracticeSession.Models
 {
-    public class Blog
+    public class User
     {
-        public int BlogId { get; set; }
-        public string Name { get; set; }
-        public string Url { get; set; }
-        public virtual List<Post> Posts { get; set; }
+        [Key]
+        public string Username { get; set; }
+        public string DisplayName { get; set; }
     }
 }

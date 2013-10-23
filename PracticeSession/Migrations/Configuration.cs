@@ -10,6 +10,7 @@ namespace PracticeSession.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
+            ContextKey = "PracticeSession.DAL.BloggingContext";
         }
 
         protected override void Seed(PracticeSession.DAL.BloggingContext context)

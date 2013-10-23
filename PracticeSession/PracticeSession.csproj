@@ -39,6 +39,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -108,9 +114,33 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\ActionsController.cs" />
+    <Compile Include="Controllers\EntityFrameworkMVCController.cs" />
+    <Compile Include="DAL\BloggingContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201310201050117_InitialCreate.cs" />
+    <Compile Include="Migrations\201310201050117_InitialCreate.Designer.cs">
+      <DependentUpon>201310201050117_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201310201103328_AddUrlToBlog.cs" />
+    <Compile Include="Migrations\201310201103328_AddUrlToBlog.Designer.cs">
+      <DependentUpon>201310201103328_AddUrlToBlog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201310201113269_AddNewUserClass.cs" />
+    <Compile Include="Migrations\201310201113269_AddNewUserClass.Designer.cs">
+      <DependentUpon>201310201113269_AddNewUserClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201310201119548_ChangeDisplayNameForUser.cs" />
+    <Compile Include="Migrations\201310201119548_ChangeDisplayNameForUser.Designer.cs">
+      <DependentUpon>201310201119548_ChangeDisplayNameForUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Blog.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\Post.cs" />
+    <Compile Include="Models\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -129,11 +159,38 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Actions\SampleAction.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\EntityFrameworkMVC\AddBlog.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201310201050117_InitialCreate.resx">
+      <DependentUpon>201310201050117_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201310201103328_AddUrlToBlog.resx">
+      <DependentUpon>201310201103328_AddUrlToBlog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201310201113269_AddNewUserClass.resx">
+      <DependentUpon>201310201113269_AddNewUserClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201310201119548_ChangeDisplayNameForUser.resx">
+      <DependentUpon>201310201119548_ChangeDisplayNameForUser.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\EntityFrameworkMVC\ListBlogs.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\EntityFrameworkMVC\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\EntityFrameworkMVC\Edit.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
