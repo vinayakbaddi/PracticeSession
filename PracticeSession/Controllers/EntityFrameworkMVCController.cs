@@ -1,5 +1,6 @@
 ﻿using PracticeSession.DAL;
 using PracticeSession.Models;
+using PracticeSession.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -61,13 +62,14 @@ namespace PracticeSession.Controllers
         [HttpGet]
         public ActionResult CreatePosts()
         {
-            var blog= from blog in db.Blogs
-                       select blog;
+            
 
-            var post = new Post()
-            {
-                Blog = blog
-            };
+            var blogPosts = new BlogPosts();
+
+            blogPosts.blog = (Blog)(from blog in db.Blogs
+                                    select blog).FirstOrDefault();
+
+            
             return View();
         }
 
