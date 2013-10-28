@@ -8,7 +8,7 @@ namespace PracticeSession.ViewModels
 {
     public class BlogPosts
     {
-        public Blog blog { get; set; }
-        public IEnumerable<Post> posts { get; set; }
+        public IEnumerable<Blog> blog { get; set; }
+        public Post posts { get; set; }
     }
 }

@@ -66,16 +66,28 @@ namespace PracticeSession.Controllers
 
             var blogPosts = new BlogPosts();
 
-            blogPosts.blog = (Blog)(from blog in db.Blogs
-                                    select blog).FirstOrDefault();
-
+            blogPosts.blog = from blog in db.Blogs
+                                    select blog;
+            blogPosts.posts = new Post();
             
             return View();
         }
 
         [HttpPost]
-        public ActionResult CreatePosts(Post post)
+        public ActionResult CreatePosts(BlogPosts blogPost)
         {
+            //var blog = (f rom bl in db.Blogs 
+            //           where bl.BlogId== blogPost.posts.BlogId
+            //           select bl).FirstOrDefault();
+            var post = new Post()
+            {
+                BlogId = blogPost.posts.BlogId,
+                Content = blogPost.posts.Content,
+                Title = blogPost.posts.Title
+                //,
+                //Blog = blog
+            };
+
             db.Posts.Add(post);
             db.SaveChanges();
 
