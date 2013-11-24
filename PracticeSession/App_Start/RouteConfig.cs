@@ -16,7 +16,7 @@ namespace PracticeSession
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Actions", action = "SampleAction", id = UrlParameter.Optional, myId = "dud"}
+                defaults: new { controller = "SignalRChat", action = "Chat", id = UrlParameter.Optional, myId = "dud"}
             );
         }
     }
