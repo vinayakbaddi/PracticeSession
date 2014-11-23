@@ -12,5 +12,10 @@ namespace PracticeSession.Controllers
         {
             return View();
         }
+
+        public ActionResult Receive()
+        {
+            return View();
+        }
     }
 }

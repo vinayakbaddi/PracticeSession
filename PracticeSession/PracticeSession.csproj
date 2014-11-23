@@ -185,6 +185,7 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\SignalRChat\Chat.cshtml" />
+    <Content Include="Views\SignalRChat\Receive.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

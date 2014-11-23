@@ -12,5 +12,10 @@ namespace PracticeSession.Hubs
         {
             Clients.All.addNewMessageToPage(name, message);
         }
+
+        public void Receive()
+        {
+            //Clients.
+        }
     }
 }
