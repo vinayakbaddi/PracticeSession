@@ -8,9 +8,10 @@ namespace DesignPatterns
 {
     public class Program
     {
-        public static void main() 
+        public static void Main() 
         {
-            System.Console.Write("this is me");
+            Console.Write("this is me");
+            Console.ReadKey();
         }
     }
 }
