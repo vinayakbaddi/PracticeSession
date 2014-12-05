@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DesignPatterns.Creational.Factory;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,8 @@ namespace DesignPatterns
     {
         public static void Main() 
         {
-            Console.Write("this is me");
+            FactoryProgram.ExecuteFactory();
+
             Console.ReadKey();
         }
     }

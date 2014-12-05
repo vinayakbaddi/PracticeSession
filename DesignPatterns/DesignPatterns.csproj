@@ -49,9 +49,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Creational\Factory\IFactory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Singleton\Singleton.cs" />
+    <Compile Include="Creational\Singleton\Singleton.cs" />
     <Compile Include="TestSingleton\TestSingleton.cs" />
   </ItemGroup>
   <ItemGroup>
