@@ -60,13 +60,11 @@ namespace DesignPatterns.Creational.Factory
     {
         public static void ExecuteFactory() {
             VehicleFactory factory = new ConcreteVehicleFactory();
-
             IFactory scooter = factory.GetVehicle(Vehicle.Bike);
-            scooter.Drive(10);
 
+            scooter.Drive(10);
             scooter = factory.GetVehicle(Vehicle.Scooter);
             scooter.Drive(20);
-
         }
     }
 }

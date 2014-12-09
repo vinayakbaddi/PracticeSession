@@ -1,4 +1,5 @@
-﻿using DesignPatterns.Creational.Factory;
+﻿using DesignPatterns.Creational.AbstractFactory;
+using DesignPatterns.Creational.Factory;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,8 @@ namespace DesignPatterns
     {
         public static void Main() 
         {
-            FactoryProgram.ExecuteFactory();
+            //FactoryProgram.ExecuteFactory();
+            AbstractFactoryProgram.Execute();
 
             Console.ReadKey();
         }

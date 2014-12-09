@@ -49,6 +49,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Creational\AbstractFactory\HTC8.cs" />
+    <Compile Include="Creational\AbstractFactory\HTCOne.cs" />
+    <Compile Include="Creational\AbstractFactory\IVehicleAbstractFactory.cs" />
     <Compile Include="Creational\Factory\IFactory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -61,6 +64,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Strategy\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Creational\AbstractFactory\UMLAbstractFactory.gif" />
+    <Content Include="Creational\Factory\UMLfactory.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
