@@ -49,8 +49,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Creational\AbstractFactory\HTC8.cs" />
-    <Compile Include="Creational\AbstractFactory\HTCOne.cs" />
     <Compile Include="Creational\AbstractFactory\IVehicleAbstractFactory.cs" />
     <Compile Include="Creational\Factory\IFactory.cs" />
     <Compile Include="Program.cs" />
