@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="Creational\AbstractFactory\IVehicleAbstractFactory.cs" />
     <Compile Include="Creational\Factory\IFactory.cs" />
+    <Compile Include="DependencyInjection\IService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Creational\Singleton\Singleton.cs" />
