@@ -3,7 +3,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace TestApplication
+namespace ConsoleApplication
 {
     public class ListPlay
     {

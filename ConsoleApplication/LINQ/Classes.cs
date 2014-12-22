@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace TestApplication.LINQ
+namespace ConsoleApplication.LINQ
 {
     public class ListOfParentClass
     {

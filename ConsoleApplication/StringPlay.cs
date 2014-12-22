@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace TestApplication
+namespace ConsoleApplication
 {
     public static class StringPlay
     {

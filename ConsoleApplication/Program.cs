@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using TestApplication.LINQ;
-using TestApplication.OOPS;
+using ConsoleApplication.LINQ;
+using ConsoleApplication.OOPS;
 
-namespace TestApplication
+namespace ConsoleApplication
 {
     class Program
     {
