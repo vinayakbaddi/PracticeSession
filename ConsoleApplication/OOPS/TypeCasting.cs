@@ -19,12 +19,12 @@ namespace ConsoleApplication.OOPS
         //Mandatory
         public MyAbstract()
         {
-            System.Console.WriteLine("This is me");
+            System.Console.WriteLine("This is me abstract constructor");
         }
 
         public MyAbstract(int a)
         {
-            System.Console.WriteLine("This is me, parameterised constructor");
+            System.Console.WriteLine("This is me, parameterised constructor {0}", a);
         }
 
         public abstract void AbstractMethod();
@@ -38,6 +38,15 @@ namespace ConsoleApplication.OOPS
 
     public class ImplementMyAbstract : MyAbstract
     {
+        public ImplementMyAbstract() : base(10)
+        { 
+            
+        }
+        public ImplementMyAbstract(int a)
+            : base(a)
+        {
+
+        }
         public new int CanBeShadowVairable = 11;
 
         public int MyOwnVariable = 20;
@@ -142,7 +151,8 @@ namespace ConsoleApplication.OOPS
             implementMyAbstract.OwnMethod();
 
             System.Console.WriteLine("implementMyAbstract.CanBeShadowVairable {0} ", implementMyAbstract.CanBeShadowVairable);
-            
+
+            implementMyAbstract = new ImplementMyAbstract(20);
         }
     }
 }

@@ -13,7 +13,8 @@ namespace ConsoleApplication
         {
             //Oops();
             //TypeCasting();
-            Overloading();
+            MerchantProgram.MerchantMain();
+
             System.Console.ReadKey();
         }
 
