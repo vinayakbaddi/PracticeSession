@@ -26,9 +26,9 @@ namespace Assignments.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("5")]
-        public short LightningValue {
+        public int LightningValue {
             get {
-                return ((short)(this["LightningValue"]));
+                return ((int)(this["LightningValue"]));
             }
         }
         

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System;
 
 namespace ConsoleApplication.LINQ
 {
@@ -77,6 +78,19 @@ namespace ConsoleApplication.LINQ
 
             return count2;
 
+        }
+    }
+
+    public class LinqMethods
+    {
+        public static void Execute()
+        {
+            IList<short> shortList = new List<short>(){10,20,30};
+            IList<int> intList = new List<int>() { 10, 20, 30 };
+
+            Console.WriteLine(shortList.Sum(x=>(short)x)); // Doesn't work unless converted
+
+            Console.WriteLine(intList.Sum()); 
         }
     }
 

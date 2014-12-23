@@ -10,7 +10,7 @@ namespace Assignments.Domain
     {
         public IList<Talk> Talks { get; set; }
 
-        public short Duration { get; set; }
+        public int Duration { get; set; }
 
         public DateTime StartTime { get; set; }
 

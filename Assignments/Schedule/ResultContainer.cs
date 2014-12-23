@@ -9,11 +9,11 @@ namespace Assignments.Schedule
     public class ResultContainer
     {
 
-        private IList<short> _scheduledSizes = new List<short>();
+        private IList<int> _scheduledSizes = new List<int>();
 
-        public short ContainerSize { get; set; }
+        public int ContainerSize { get; set; }
 
-        public IList<short>  ScheduledSizes
+        public IList<int>  ScheduledSizes
         {
             get { return _scheduledSizes; }
             set { _scheduledSizes = value; }

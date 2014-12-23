@@ -57,6 +57,7 @@
     <Compile Include="Schedule\ResultContainer.cs" />
     <Compile Include="Schedule\Scheduler.cs" />
     <Compile Include="Schedule\ScheduleResults.cs" />
+    <Compile Include="Schedule\Solver.cs" />
     <Compile Include="Services\SessionService.cs" />
     <Compile Include="Services\TalkService.cs" />
     <Compile Include="Settings.cs" />

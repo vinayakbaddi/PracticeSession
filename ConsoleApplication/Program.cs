@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using ConsoleApplication.LINQ;
 using ConsoleApplication.OOPS;
+using ConsoleApplication.Threading;
 
 namespace ConsoleApplication
 {
@@ -13,7 +14,7 @@ namespace ConsoleApplication
         {
             //Oops();
             //TypeCasting();
-            MerchantProgram.MerchantMain();
+            LinqPlay();
 
             System.Console.ReadKey();
         }
@@ -29,6 +30,11 @@ namespace ConsoleApplication
             //playWithClassesForLinq.Play();
             StringPlay.DateWithoutTime();
             
+        }
+
+        public static void LinqPlay()
+        {
+            LinqMethods.Execute();
         }
 
         public static void Oops()
@@ -75,6 +81,10 @@ namespace ConsoleApplication
         public static void Overloading() { 
             Overloading overloading  = new Overloading();
             overloading.RunOverloading();
+        }
+
+        public static void Threading() {
+            TaskExample.Execute();
         }
     }
 }

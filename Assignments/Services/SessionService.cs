@@ -31,13 +31,13 @@ namespace Assignments.Services
 
         }
 
-        private static short[] GetUniqueSessionMaxSizesPerTrack()
+        private static int[] GetUniqueSessionMaxSizesPerTrack()
         {
             var stringCollection = Settings.Default.UniqueSessionMaxSize;
             var sizes = new string[stringCollection.Count];
             stringCollection.CopyTo(sizes, 0);
 
-            return sizes.Select(short.Parse).ToArray();
+            return sizes.Select(int.Parse).ToArray();
         }
     }
 }

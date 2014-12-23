@@ -52,7 +52,7 @@ namespace Assignments.Services
             return new Talk()
             {
                 Id = _talks.Count,
-                Duration = short.Parse(match.Groups["time"].Value),
+                Duration = int.Parse(match.Groups["time"].Value),
                 Title = rawTalksData.Substring(0, match.Index).Trim()
             };
         }

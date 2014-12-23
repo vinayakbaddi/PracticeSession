@@ -57,6 +57,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StringPlay.cs" />
+    <Compile Include="Threading\ThreadingExamples.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ASSIGNMENTS\confman.zip" />

@@ -14,7 +14,7 @@ namespace Assignments.Domain
         /// <summary>
         /// Duration In Minutes
         /// </summary>
-        public short Duration { get; set; }
+        public int Duration { get; set; }
 
         public DateTime StartTime { get; set; }
 

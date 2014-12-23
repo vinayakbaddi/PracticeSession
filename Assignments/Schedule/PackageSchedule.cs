@@ -9,16 +9,16 @@ namespace Assignments.Schedule
 {
     public class PackageSchedule
     {
-        private short[] _sessionSize;
-        private List<short> _talkSize;
-        private List<short> _packedSchedule; 
+        private int[] _sessionSize;
+        private List<int> _talkSize;
+        private List<int> _packedSchedule; 
 
 
-        public PackageSchedule(short[] sessionSize, IEnumerable<short> talkSize) 
+        public PackageSchedule(int[] sessionSize, IEnumerable<int> talkSize) 
         {
             _sessionSize = sessionSize;
-            _talkSize = new List<short>(talkSize.OrderByDescending(x => x));
-            _packedSchedule = new List<short>();
+            _talkSize = new List<int>(talkSize.OrderByDescending(x => x));
+            _packedSchedule = new List<int>();
         }
 
         public ScheduleResults Pack(ScheduleResults results, CancellationToken cancelToken)
@@ -45,10 +45,10 @@ namespace Assignments.Schedule
                              && sumParcelSizes + parcel <= containerSize)
                         {
                             conveyer.ScheduledSizes.Add(parcel);
-                            _packedParcels.Add(parcel);
+                            _packedSchedule.Add(parcel);
                             _talkSize.RemoveAt(i);
 
-                            if (conveyer.ScheduledSizes.Sum() == containerSize) i = _talkSize.Count; //short circuit inner for loop
+                            if (conveyer.ScheduledSizes.Sum(x=>(int)x) == containerSize) i = _talkSize.Count; //int circuit inner for loop
                             continue;
                         }
 
