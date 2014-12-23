@@ -29,6 +29,11 @@ namespace Assignments.Services
             ILoader loader = new Scheduler(GetUniqueSessionMaxSizesPerTrack(), listTalks.Select(t => t.Duration).ToArray());
             loader.Load();
 
+            while (!loader.AreResultsReady()) ;
+
+            ScheduleResults results = loader.Results();
+            IList<ResultContainer> resultGroup = results.OptimizedResults ?? results.CurrentBestResults;
+            _sessions = Mapper.Map(_sessions, listTalks, resultGroup);
         }
 
         private static int[] GetUniqueSessionMaxSizesPerTrack()
@@ -39,5 +44,10 @@ namespace Assignments.Services
 
             return sizes.Select(int.Parse).ToArray();
         }
+
+        public IEnumerable<Session> GetSessions()
+        {
+            return _sessions;
+        } 
     }
 }

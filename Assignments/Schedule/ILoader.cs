@@ -9,7 +9,7 @@ namespace Assignments.Schedule
     public interface ILoader
     {
         void Load();
-        //ScheduleResults Results();
+        ScheduleResults Results();
         void Cancel();
         bool AreRunsFinished();
         bool AreResultsReady();

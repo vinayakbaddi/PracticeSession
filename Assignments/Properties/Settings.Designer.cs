@@ -26,9 +26,9 @@ namespace Assignments.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("5")]
-        public int LightningValue {
+        public short LightningValue {
             get {
-                return ((int)(this["LightningValue"]));
+                return ((short)(this["LightningValue"]));
             }
         }
         
@@ -67,6 +67,60 @@ namespace Assignments.Properties {
         public global::System.Collections.Specialized.StringCollection UniqueSessionMaxSize {
             get {
                 return ((global::System.Collections.Specialized.StringCollection)(this["UniqueSessionMaxSize"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("5:00:00 PM")]
+        public string NetworkEventMinTime {
+            get {
+                return ((string)(this["NetworkEventMinTime"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("4:00:00 PM")]
+        public string NetworkEventMaxTime {
+            get {
+                return ((string)(this["NetworkEventMaxTime"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("9:00:00 AM")]
+        public string MorningMinTime {
+            get {
+                return ((string)(this["MorningMinTime"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("12:00:00 PM")]
+        public string MorningMaxTime {
+            get {
+                return ((string)(this["MorningMaxTime"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1:00:00 PM")]
+        public string AfternoonMinTime {
+            get {
+                return ((string)(this["AfternoonMinTime"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("5:00:00 PM")]
+        public string AfternoonMaxTime {
+            get {
+                return ((string)(this["AfternoonMaxTime"]));
             }
         }
     }

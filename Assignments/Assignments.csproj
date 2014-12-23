@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Domain\Mapper.cs" />
     <Compile Include="Domain\Session.cs" />
     <Compile Include="Domain\Talk.cs" />
     <Compile Include="Domain\Track.cs" />
@@ -55,11 +56,18 @@
     <Compile Include="Schedule\ILoader.cs" />
     <Compile Include="Schedule\PackageSchedule.cs" />
     <Compile Include="Schedule\ResultContainer.cs" />
+    <Compile Include="Schedule\SchedulePresenter.cs" />
     <Compile Include="Schedule\Scheduler.cs" />
     <Compile Include="Schedule\ScheduleResults.cs" />
     <Compile Include="Schedule\Solver.cs" />
     <Compile Include="Services\SessionService.cs" />
     <Compile Include="Services\TalkService.cs" />
+    <Compile Include="Services\TrackService.cs" />
+    <Compile Include="Services\ValidateStrategies\IValidator.cs" />
+    <Compile Include="Services\ValidateStrategies\RawTime.cs" />
+    <Compile Include="Services\ValidateStrategies\RawTitle.cs" />
+    <Compile Include="Services\ValidateStrategies\Test.cs" />
+    <Compile Include="Services\ValidateStrategies\ValidateContext.cs" />
     <Compile Include="Settings.cs" />
   </ItemGroup>
   <ItemGroup>

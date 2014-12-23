@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Assignments.Properties;
 using System.Text.RegularExpressions;
+using Assignments.Services.ValidateStrategies;
 
 namespace Assignments.Services
 {
@@ -13,13 +14,20 @@ namespace Assignments.Services
     {
         IList<Talk> _talks = new List<Talk>();
 
+        public void Reset()
+        {
+            _talks = new List<Talk>();
+        }
+
         public IEnumerable<Talk> GetTalks()
         {
             return _talks;
         }
 
-        public void AddTalk(string rawTalksData)
+        public bool HasAddTalk(string rawTalksData)
         {
+            if (!IsValidData(rawTalksData)) return false;
+
             try
             {
                 var parsedTalkData = ParseRawTalkData(rawTalksData);
@@ -29,7 +37,9 @@ namespace Assignments.Services
             { 
                 //log Exception
                 Console.WriteLine("Something went wrong, Please verify the data");
+                return false;
             }
+            return true;
         }
 
         Talk ParseRawTalkData(string rawTalksData)
@@ -55,6 +65,14 @@ namespace Assignments.Services
                 Duration = int.Parse(match.Groups["time"].Value),
                 Title = rawTalksData.Substring(0, match.Index).Trim()
             };
+        }
+
+        private bool IsValidData(string rawData)
+        {
+            var validateTime = new ValidateContext(new RawTime());
+            var validateTitle = new ValidateContext(new RawTitle());
+
+            return validateTime.IsValid(rawData) && validateTitle.IsValid(rawData);
         }
     }
 }
