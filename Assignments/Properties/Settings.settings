@@ -1,0 +1,25 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Assignments.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="LightningValue" Type="System.Int16" Scope="Application">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="LunchTime" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">12:00:00 PM</Value>
+    </Setting>
+    <Setting Name="TalkTimeKeyword" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">LIGHTNING</Value>
+    </Setting>
+    <Setting Name="TalkTimePattern" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">\b(?&lt;time&gt;\d+)\w+?\b$</Value>
+    </Setting>
+    <Setting Name="UniqueSessionMaxSize" Type="System.Collections.Specialized.StringCollection" Scope="Application">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;180&lt;/string&gt;
+  &lt;string&gt;240&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
