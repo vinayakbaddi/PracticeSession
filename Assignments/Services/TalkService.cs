@@ -10,21 +10,33 @@ using Assignments.Services.Validator;
 
 namespace Assignments.Services
 {
-    public class TalkService
+    public class TalkService : ITalkService
     {
         IList<Talk> _talks = new List<Talk>();
-
+        
+        /// <summary>
+        /// Resets all the talks to Zero
+        /// </summary>
         public void Reset()
         {
             _talks = new List<Talk>();
         }
 
+        /// <summary>
+        /// Get the list of Talks
+        /// </summary>
+        /// <returns></returns>
         public IEnumerable<Talk> GetTalks()
         {
             return _talks;
         }
 
-        public bool HasAddTalk(string rawTalksData)
+        /// <summary>
+        /// Method to AddTalk
+        /// </summary>
+        /// <param name="rawTalksData"></param>
+        /// <returns></returns>
+        public bool IsAddTalk(string rawTalksData)
         {
             if (!IsValidData(rawTalksData)) return false;
 
@@ -42,6 +54,11 @@ namespace Assignments.Services
             return true;
         }
 
+        /// <summary>
+        /// Process Raw String Data
+        /// </summary>
+        /// <param name="rawTalksData"></param>
+        /// <returns></returns>
         Talk ParseRawTalkData(string rawTalksData)
         {
             string upperClean = rawTalksData.Trim().ToUpper();
@@ -67,6 +84,11 @@ namespace Assignments.Services
             };
         }
 
+        /// <summary>
+        /// Validate data
+        /// </summary>
+        /// <param name="rawData"></param>
+        /// <returns></returns>
         private bool IsValidData(string rawData)
         {
             var validateTime = new ValidateContext(new RawTime());

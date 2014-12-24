@@ -6,12 +6,16 @@ using System.Threading.Tasks;
 
 namespace Assignments.Schedule
 {
-    public interface ILoader
+    public interface IScheduler
     {
         void Load();
+
         ScheduleResults Results();
+        
         void Cancel();
+        
         bool AreRunsFinished();
+        
         bool AreResultsReady();
     }
 }

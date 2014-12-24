@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Assignments.Schedule
 {
-    public class SchedulePresenter
+    public class SchedulePresenter : ISchedulePresenter
     {
-        private readonly TalkService _talkService;
-        private readonly SessionService _sessionService;
-        private readonly TrackService _trackService;
+        private readonly ITalkService _talkService;
+        private readonly ISessionService _sessionService;
+        private readonly ITrackService _trackService;
 
         public SchedulePresenter()
         {
@@ -21,13 +21,18 @@ namespace Assignments.Schedule
                        
         }
 
+        /// <summary>
+        /// Submit Schedule
+        /// </summary>
+        /// <param name="proposedTalks"></param>
+        /// <returns></returns>
         public string SubmitSchedule(string proposedTalks)
         {
             _talkService.Reset();
 
             foreach (var line in proposedTalks.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries))
             {
-                _talkService.HasAddTalk(line.Trim());
+                _talkService.IsAddTalk(line.Trim());
             }
 
             _sessionService.CreateSessions(_talkService.GetTalks());

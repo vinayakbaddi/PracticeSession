@@ -13,7 +13,11 @@ namespace Assignments.Schedule
         private List<int> _talkSize;
         private List<int> _packedSchedule; 
 
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sessionSize"></param>
+        /// <param name="talkSize"></param>
         public PackageScheduler(int[] sessionSize, IEnumerable<int> talkSize) 
         {
             _sessionSize = sessionSize;
@@ -21,7 +25,13 @@ namespace Assignments.Schedule
             _packedSchedule = new List<int>();
         }
 
-        public ScheduleResults Pack(ScheduleResults results, CancellationToken cancelToken)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="results"></param>
+        /// <param name="cancelToken"></param>
+        /// <returns></returns>
+        public ScheduleResults OrganizeSchedule(ScheduleResults results, CancellationToken cancelToken)
         {
             IList<ResultContainer> containers = new List<ResultContainer>();
             while (_talkSize.Count > 0)
@@ -30,7 +40,7 @@ namespace Assignments.Schedule
                 {
                     if (cancelToken.IsCancellationRequested) return results;
 
-                    var conveyer = new ResultContainer { ContainerSize = containerSize };
+                    var resultContainer = new ResultContainer { ContainerSize = containerSize };
 
                     int i;
                     bool firstPass = true;
@@ -38,31 +48,31 @@ namespace Assignments.Schedule
                     {
                         if (cancelToken.IsCancellationRequested) return results;
 
-                        int parcel = _talkSize[i];
-                        int sumParcelSizes = conveyer.ScheduledSizes == null ? 0 : conveyer.ScheduledSizes.Sum();
+                        int talk = _talkSize[i];
+                        int sumScheduleSize = resultContainer.ScheduledSizes == null ? 0 : resultContainer.ScheduledSizes.Sum();
 
-                        if ((conveyer.ScheduledSizes == null || conveyer.ScheduledSizes.Count <= 0 || (conveyer.ScheduledSizes.Last() > parcel || !firstPass))
-                             && sumParcelSizes + parcel <= containerSize)
+                        if ((resultContainer.ScheduledSizes == null || resultContainer.ScheduledSizes.Count <= 0 || (resultContainer.ScheduledSizes.Last() > talk || !firstPass))
+                             && sumScheduleSize + talk <= containerSize)
                         {
-                            conveyer.ScheduledSizes.Add(parcel);
-                            _packedSchedule.Add(parcel);
+                            resultContainer.ScheduledSizes.Add(talk);
+                            _packedSchedule.Add(talk);
                             _talkSize.RemoveAt(i);
 
-                            if (conveyer.ScheduledSizes.Sum(x=>(int)x) == containerSize) i = _talkSize.Count; //int circuit inner for loop
+                            if (resultContainer.ScheduledSizes.Sum(x=>(int)x) == containerSize) i = _talkSize.Count; //int circuit inner for loop
                             continue;
                         }
 
                         i++;
                         //if we get to the end and we still have room enough for at least the smallest of our packages, then reset and go from 
                         //largest to smallest, again.  until our smallest sized parcel remaining is bigger than the container delta.
-                        if (i >= _talkSize.Count && sumParcelSizes < containerSize && containerSize - sumParcelSizes >= _talkSize.Last())
+                        if (i >= _talkSize.Count && sumScheduleSize < containerSize && containerSize - sumScheduleSize >= _talkSize.Last())
                         {
                             firstPass = false;
                             i = 0;
                         }
                     }
 
-                    containers.Add(conveyer);
+                    containers.Add(resultContainer);
                 }
             }
 
@@ -81,11 +91,11 @@ namespace Assignments.Schedule
             if (containers == null || containers.Count <= 0) return false;
 
             return
-                containers.Count <= currentBestResults.Count /*fewer or equal sessions*/
+                containers.Count <= currentBestResults.Count 
                 &&
                 containers.Sum(a => a.ScheduledSizes.Count) >= currentBestResults.Sum(a => a.ScheduledSizes.Count) /*more or same talks*/
                 &&
-                _talkSize.Count <= 0 /*all current parcels were packed*/;
+                _talkSize.Count <= 0;
         }
     }
 }

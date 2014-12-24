@@ -53,13 +53,17 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Schedule\ILoader.cs" />
+    <Compile Include="Schedule\ISchedulePresenter.cs" />
+    <Compile Include="Schedule\IScheduler.cs" />
     <Compile Include="Schedule\PackageScheduler.cs" />
     <Compile Include="Schedule\ResultContainer.cs" />
     <Compile Include="Schedule\SchedulePresenter.cs" />
     <Compile Include="Schedule\Scheduler.cs" />
     <Compile Include="Schedule\ScheduleResults.cs" />
     <Compile Include="Schedule\Solver.cs" />
+    <Compile Include="Services\ISessionService.cs" />
+    <Compile Include="Services\ITalkService.cs" />
+    <Compile Include="Services\ITrackService.cs" />
     <Compile Include="Services\SessionService.cs" />
     <Compile Include="Services\TalkService.cs" />
     <Compile Include="Services\TrackService.cs" />

@@ -8,12 +8,17 @@ using System.Threading.Tasks;
 
 namespace Assignments.Services
 {
-    public class TrackService
+    public class TrackService : ITrackService
     {
-
+        /// <summary>
+        /// Create Schedule
+        /// </summary>
+        /// <param name="sessions"></param>
+        /// <returns></returns>
         public string CreateSchedule(IEnumerable<Session> sessions)
         {
             IList<Track> track = CreateTrack(new List<Session>(sessions));
+            
             return ScheduleFormatter(track);
         }
 

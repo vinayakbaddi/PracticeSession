@@ -9,7 +9,7 @@ using Assignments.Schedule;
 
 namespace Assignments.Services
 {
-    public class SessionService
+    public class SessionService : ISessionService
     {
         IList<Session> _sessions;
 
@@ -26,13 +26,15 @@ namespace Assignments.Services
         {
             IList<Talk> listTalks = new List<Talk>(talks);
 
-            ILoader loader = new Scheduler(GetUniqueSessionMaxSizesPerTrack(), listTalks.Select(t => t.Duration).ToArray());
-            loader.Load();
+            IScheduler scheduler = new Scheduler(GetUniqueSessionMaxSizesPerTrack(), listTalks.Select(t => t.Duration).ToArray());
+            scheduler.Load();
 
-            while (!loader.AreResultsReady() && talks.Count()>0) ;
+            while (!scheduler.AreResultsReady() && talks.Count()>0) ;
 
-            ScheduleResults results = loader.Results();
+            ScheduleResults results = scheduler.Results();
+
             IList<ResultContainer> resultGroup = results.OptimizedResults ?? results.CurrentBestResults;
+            
             _sessions = Mapper.Map(_sessions, listTalks, resultGroup);
         }
 
@@ -45,6 +47,11 @@ namespace Assignments.Services
             return sizes.Select(int.Parse).ToArray();
         }
 
+
+        /// <summary>
+        /// Get Sessions
+        /// </summary>
+        /// <returns></returns>
         public IEnumerable<Session> GetSessions()
         {
             return _sessions;
