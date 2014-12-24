@@ -10,7 +10,7 @@ namespace ConsoleApplication
 
         public void ListStringReplace()
         {
-            List<FeeRetainerStatusList> list = new List<FeeRetainerStatusList>()
+            IList<FeeRetainerStatusList> list = new List<FeeRetainerStatusList>()
                                                    {
                                                        new FeeRetainerStatusList()
                                                            {
@@ -37,7 +37,7 @@ namespace ConsoleApplication
             return string.Format("{0}/{1}", "Due", "Active");
         }
 
-        private void ReplaceRetainerActiveType(List<FeeRetainerStatusList> feeRetainerStatusList)
+        private void ReplaceRetainerActiveType(IList<FeeRetainerStatusList> feeRetainerStatusList)
         {
             foreach (var retainerStatusList in feeRetainerStatusList)
             {

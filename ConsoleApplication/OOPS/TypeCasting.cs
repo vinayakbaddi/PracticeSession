@@ -121,6 +121,8 @@ namespace ConsoleApplication.OOPS
             Object object1 = new Object();
             A a = new A();
             B b = new B();
+
+            //Error	1	Cannot implicitly convert type 'ConsoleApplication.OOPS.A' to 'ConsoleApplication.OOPS.B'. An explicit conversion exists (are you missing a cast?)	
             //B b2 = new A();
             
             object1 = a;
@@ -142,7 +144,10 @@ namespace ConsoleApplication.OOPS
 
             System.Console.WriteLine("myAbstract.MyDataVairable {0}", myAbstract.MyDataVairable);
             System.Console.WriteLine("myAbstract.CanBeShadowVairable {0}", myAbstract.CanBeShadowVairable);
-            //System.Console.WriteLine("myAbstract.CanBeShadowVairable {0}", myAbstract.MyOwnVariable); Can't access
+            
+            // Can't access
+            //System.Console.WriteLine("myAbstract.CanBeShadowVairable {0}", myAbstract.MyOwnVariable);
+
             myAbstract.AbstractMethod();
             myAbstract.VirtualMethod();
 
