@@ -12,7 +12,7 @@ namespace Assignments
         {
             SchedulePresenter schedulePresenter = new SchedulePresenter();
 
-            string data = "Arrange meeting for 60min \n New client meet 120min";
+            string data = "Arrange meeting for 60min\nThis is me 60min";
 
             var results = schedulePresenter.SubmitSchedule(data);
             Console.WriteLine(results);

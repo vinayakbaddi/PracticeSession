@@ -25,8 +25,5 @@
             // Add code to handle the SettingsSaving event here.
         }
 
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("LUNCH")]
-        public string LunchTitle { get; set; }
-    }
+     }
 }

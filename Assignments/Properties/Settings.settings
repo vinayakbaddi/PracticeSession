@@ -39,5 +39,8 @@
     <Setting Name="AfternoonMaxTime" Type="System.String" Scope="Application">
       <Value Profile="(Default)">5:00:00 PM</Value>
     </Setting>
+    <Setting Name="LunchTitle" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Lunch</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

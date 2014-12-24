@@ -123,5 +123,14 @@ namespace Assignments.Properties {
                 return ((string)(this["AfternoonMaxTime"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Lunch")]
+        public string LunchTitle {
+            get {
+                return ((string)(this["LunchTitle"]));
+            }
+        }
     }
 }

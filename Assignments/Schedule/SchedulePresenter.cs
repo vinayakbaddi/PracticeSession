@@ -24,6 +24,7 @@ namespace Assignments.Schedule
         public string SubmitSchedule(string proposedTalks)
         {
             _talkService.Reset();
+
             foreach (var line in proposedTalks.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries))
             {
                 _talkService.HasAddTalk(line.Trim());

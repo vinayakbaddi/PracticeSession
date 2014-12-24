@@ -29,7 +29,7 @@ namespace Assignments.Services
             ILoader loader = new Scheduler(GetUniqueSessionMaxSizesPerTrack(), listTalks.Select(t => t.Duration).ToArray());
             loader.Load();
 
-            while (!loader.AreResultsReady()) ;
+            while (!loader.AreResultsReady() && talks.Count()>0) ;
 
             ScheduleResults results = loader.Results();
             IList<ResultContainer> resultGroup = results.OptimizedResults ?? results.CurrentBestResults;
