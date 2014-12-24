@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Assignments.Services.ValidateStrategies
+namespace Assignments.Services.Validator
 {
     interface Test
     {

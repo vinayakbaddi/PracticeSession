@@ -1,7 +1,7 @@
 ﻿using System.Text.RegularExpressions;
 using Assignments.Properties;
 
-namespace Assignments.Services.ValidateStrategies
+namespace Assignments.Services.Validator
 {
 	/// <summary>
 	/// concrete validator strategy

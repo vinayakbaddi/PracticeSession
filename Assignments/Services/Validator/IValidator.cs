@@ -1,4 +1,4 @@
-﻿namespace Assignments.Services.ValidateStrategies
+﻿namespace Assignments.Services.Validator
 {
 	/// <summary>
 	/// Interface for validation strategy

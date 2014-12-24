@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace Assignments.Schedule
 {
-    public class PackageSchedule
+    public class PackageScheduler
     {
         private int[] _sessionSize;
         private List<int> _talkSize;
         private List<int> _packedSchedule; 
 
 
-        public PackageSchedule(int[] sessionSize, IEnumerable<int> talkSize) 
+        public PackageScheduler(int[] sessionSize, IEnumerable<int> talkSize) 
         {
             _sessionSize = sessionSize;
             _talkSize = new List<int>(talkSize.OrderByDescending(x => x));

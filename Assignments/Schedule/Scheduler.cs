@@ -26,7 +26,7 @@ namespace Assignments.Schedule
         {
             _results = new ScheduleResults();
 
-            var data = Task<ScheduleResults>.Factory.StartNew(() => new PackageSchedule(_sessionSize, _talkSize).Pack(_results, _cancelToken), _cancelToken);
+            var data = Task<ScheduleResults>.Factory.StartNew(() => new PackageScheduler(_sessionSize, _talkSize).Pack(_results, _cancelToken), _cancelToken);
 
             var brute = new Task<ScheduleResults>(()=> new Solver(_sessionSize,_talkSize).Pack(_results,_cancelToken), TaskCreationOptions.LongRunning);
 

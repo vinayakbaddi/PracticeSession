@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Assignments.Properties;
 using System.Text.RegularExpressions;
-using Assignments.Services.ValidateStrategies;
+using Assignments.Services.Validator;
 
 namespace Assignments.Services
 {

@@ -54,7 +54,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="Schedule\ILoader.cs" />
-    <Compile Include="Schedule\PackageSchedule.cs" />
+    <Compile Include="Schedule\PackageScheduler.cs" />
     <Compile Include="Schedule\ResultContainer.cs" />
     <Compile Include="Schedule\SchedulePresenter.cs" />
     <Compile Include="Schedule\Scheduler.cs" />
@@ -63,11 +63,11 @@
     <Compile Include="Services\SessionService.cs" />
     <Compile Include="Services\TalkService.cs" />
     <Compile Include="Services\TrackService.cs" />
-    <Compile Include="Services\ValidateStrategies\IValidator.cs" />
-    <Compile Include="Services\ValidateStrategies\RawTime.cs" />
-    <Compile Include="Services\ValidateStrategies\RawTitle.cs" />
-    <Compile Include="Services\ValidateStrategies\Test.cs" />
-    <Compile Include="Services\ValidateStrategies\ValidateContext.cs" />
+    <Compile Include="Services\Validator\IValidator.cs" />
+    <Compile Include="Services\Validator\RawTime.cs" />
+    <Compile Include="Services\Validator\RawTitle.cs" />
+    <Compile Include="Services\Validator\Test.cs" />
+    <Compile Include="Services\Validator\ValidateContext.cs" />
     <Compile Include="Settings.cs" />
   </ItemGroup>
   <ItemGroup>
