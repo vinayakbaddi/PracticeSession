@@ -5,6 +5,7 @@ using System.Text;
 using ConsoleApplication.LINQ;
 using ConsoleApplication.OOPS;
 using ConsoleApplication.Threading;
+using ConsoleApplication.Methods;
 
 namespace ConsoleApplication
 {
@@ -14,8 +15,8 @@ namespace ConsoleApplication
         {
             //Oops();
             //TypeCasting();
-            LinqPlay();
-
+            //LinqPlay();
+            ExecuteExtension.ExecuteMethod();
             System.Console.ReadKey();
         }
 

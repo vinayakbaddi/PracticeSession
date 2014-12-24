@@ -77,6 +77,7 @@ namespace Assignments.Schedule
         private bool IsMoreOptimal(IList<ResultContainer> containers, IList<ResultContainer> currentBestResults)
         {
             if (currentBestResults == null || currentBestResults.Count <= 0) return true;
+
             if (containers == null || containers.Count <= 0) return false;
 
             return

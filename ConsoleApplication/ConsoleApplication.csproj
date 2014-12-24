@@ -47,6 +47,8 @@
     <Compile Include="LINQ\Classes.cs" />
     <Compile Include="ListPlay.cs" />
     <Compile Include="Logic.cs" />
+    <Compile Include="Methods\ExtensionMethods.cs" />
+    <Compile Include="Methods\PartialMethod.cs" />
     <Compile Include="OOPS\ILockAdaptor.cs" />
     <Compile Include="OOPS\ImplementMultipleInterfaces.cs" />
     <Compile Include="OOPS\ImplementOops.cs" />
