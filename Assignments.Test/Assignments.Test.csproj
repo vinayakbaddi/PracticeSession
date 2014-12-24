@@ -56,11 +56,18 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="TestSchedule.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Assignments\Assignments.csproj">
+      <Project>{e02f8c9a-9fca-4a2f-bb75-41e17b03edcb}</Project>
+      <Name>Assignments</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
