@@ -43,7 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ASSIGNMENTS\ideone_0t2h2h.cs" />
-    <Compile Include="Class1.cs" />
+    <Compile Include="DataStructures\InBuiltStructures.cs" />
     <Compile Include="LINQ\Classes.cs" />
     <Compile Include="ListPlay.cs" />
     <Compile Include="Logic.cs" />
