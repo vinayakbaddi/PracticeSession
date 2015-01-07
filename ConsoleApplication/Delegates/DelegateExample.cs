@@ -42,7 +42,14 @@ namespace ConsoleApplication.Delegates
 
         #region Anonymous Delegates
 
-        public void UsingActionDelegateWithAnonymousMethod()
+        public void UsingActionDelegateWithAnonymousMethodAndNoParemeters()
+        {
+            Action printSome = delegate { Console.WriteLine("A dummy work done with delegate anonymous method without parameters"); };
+
+            printSome();
+        }
+
+        public void UsingActionDelegateWithAnonymousMethodAndParemeters()
         {
             //Action Delegate
             Action<String> printReverse = delegate(string text)
@@ -72,7 +79,6 @@ namespace ConsoleApplication.Delegates
 
             var IsNoEvent= isEven(7);
             Console.WriteLine(IsNoEvent);
-
         }
         #endregion Anonymous Delegates
     }
@@ -82,8 +88,9 @@ namespace ConsoleApplication.Delegates
         public static void RunExample() 
         {
             var useDelegate = new UseDelegates();
+            useDelegate.UsingActionDelegateWithAnonymousMethodAndNoParemeters();
             useDelegate.ConsumeDelegates();
-            useDelegate.UsingActionDelegateWithAnonymousMethod();
+            useDelegate.UsingActionDelegateWithAnonymousMethodAndParemeters();
             useDelegate.UsingPredicateDelegateWithAnonymousMethod();
         }
     }
