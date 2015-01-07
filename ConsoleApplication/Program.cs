@@ -6,6 +6,7 @@ using ConsoleApplication.LINQ;
 using ConsoleApplication.OOPS;
 using ConsoleApplication.Threading;
 using ConsoleApplication.Methods;
+using ConsoleApplication.Delegates;
 
 namespace ConsoleApplication
 {
@@ -18,6 +19,7 @@ namespace ConsoleApplication
             //TypeCasting();
             //LinqPlay();
             //ExecuteExtension.ExecuteMethod();
+            DelegateExample.RunExample();
             System.Console.ReadKey();
         }
 
