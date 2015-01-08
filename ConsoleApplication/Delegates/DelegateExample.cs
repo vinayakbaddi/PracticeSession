@@ -81,6 +81,71 @@ namespace ConsoleApplication.Delegates
             Console.WriteLine(IsNoEvent);
         }
         #endregion Anonymous Delegates
+
+        #region Captured Variables and outside variables
+
+        public void EnclosingMethod()
+        {
+            int outerVariable = 5;
+            string capturedVariable = "captured";
+
+            if (DateTime.Now.Hour == 12) {
+                int normalLocalVariable = DateTime.Now.Minute;
+                Console.WriteLine(normalLocalVariable);
+            }
+
+            Action x = delegate
+            {
+                string aNonLocal = "local to anonymous method";
+                Console.WriteLine(capturedVariable + aNonLocal);
+            };
+
+            x();
+        }
+
+        public void MoreOnAnonymousMethodsAndCaptureVariable()
+        {
+            string captured = "before x is created";
+
+            Action x = delegate
+            {
+                Console.WriteLine(captured);
+                captured = "changed by x";
+            };
+
+            captured = "directly before x is invoked";
+
+            x();
+            Console.WriteLine(captured);
+
+            captured = "before second invocation";
+            x();
+        }
+
+        public Action CapturedVariableWithExtendedLife()
+        {
+            int cnt = 5;
+            Action retur = delegate
+            {
+                Console.WriteLine("Val is {0}", cnt);
+                cnt++;
+            };
+
+            retur();
+
+            return retur;
+        }
+
+        public void ExcuteCapturedVariableWithExtendedLife()
+        {
+            Action x = CapturedVariableWithExtendedLife();
+            Action y = CapturedVariableWithExtendedLife();
+            x();
+            x();
+            Action z = CapturedVariableWithExtendedLife();
+        }
+
+        #endregion Captured Variables and outside variables
     }
 
     public static class DelegateExample
@@ -88,10 +153,14 @@ namespace ConsoleApplication.Delegates
         public static void RunExample() 
         {
             var useDelegate = new UseDelegates();
-            useDelegate.UsingActionDelegateWithAnonymousMethodAndNoParemeters();
-            useDelegate.ConsumeDelegates();
-            useDelegate.UsingActionDelegateWithAnonymousMethodAndParemeters();
-            useDelegate.UsingPredicateDelegateWithAnonymousMethod();
+            //useDelegate.UsingActionDelegateWithAnonymousMethodAndNoParemeters();
+            //useDelegate.ConsumeDelegates();
+            //useDelegate.UsingActionDelegateWithAnonymousMethodAndParemeters();
+            //useDelegate.UsingPredicateDelegateWithAnonymousMethod();
+            //useDelegate.EnclosingMethod();
+            //useDelegate.MoreOnAnonymousMethodsAndCaptureVariable();
+            
+            useDelegate.ExcuteCapturedVariableWithExtendedLife();
         }
     }
 }
