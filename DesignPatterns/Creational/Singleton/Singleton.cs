@@ -36,7 +36,7 @@ namespace DesignPatterns.Creational.Singleton
     //Using Lazy and a much universal solution
     public sealed class LazySingleton
     {
-        private static readonly Lazy<LazySingleton> lazy = new Lazy<LazySingleton>(() => new LazySingleton());
+        private static readonly Lazy<LazySingleton> lazy = new Lazy<LazySingleton>(() => new LazySingleton(), true);
 
         public static LazySingleton Instance { get {return lazy.Value;} }
 

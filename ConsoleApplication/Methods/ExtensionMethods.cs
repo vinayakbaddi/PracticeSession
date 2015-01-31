@@ -33,6 +33,7 @@ namespace ConsoleApplication.Methods
             UseOfExtensionMethods ex = new UseOfExtensionMethods();
             ex.JustMethod();
             ex.DefineExtension("data");
+            ExtensionMethod.DefineExtension(ex,"data on static method");
            
         }
     }

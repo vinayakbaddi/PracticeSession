@@ -15,11 +15,11 @@ namespace ConsoleApplication
         static void Main(string[] args)
         {
             //Oops();
-            Overloading();
+            //Overloading();
             //TypeCasting();
             //LinqPlay();
-            //ExecuteExtension.ExecuteMethod();
-            DelegateExample.RunExample();
+            ExecuteExtension.ExecuteMethod();
+            //DelegateExample.RunExample();
             System.Console.ReadKey();
         }
 
