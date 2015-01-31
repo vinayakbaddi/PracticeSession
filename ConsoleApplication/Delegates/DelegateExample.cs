@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleApplication.Delegates
 {
@@ -145,6 +144,20 @@ namespace ConsoleApplication.Delegates
             Action z = CapturedVariableWithExtendedLife();
         }
 
+        public void CapturedVariableRunsDifferentlyInCSharpVersions()
+        {
+            string[] values = { "x", "y", "z" };
+            var actions = new List<Action>();
+            foreach (string value in values)
+            {
+                actions.Add(() => Console.WriteLine(value));
+            }
+            foreach (Action action in actions)
+            {
+                action();
+            }
+        }
+
         #endregion Captured Variables and outside variables
     }
 
@@ -160,7 +173,8 @@ namespace ConsoleApplication.Delegates
             //useDelegate.EnclosingMethod();
             //useDelegate.MoreOnAnonymousMethodsAndCaptureVariable();
             
-            useDelegate.ExcuteCapturedVariableWithExtendedLife();
+            //useDelegate.ExcuteCapturedVariableWithExtendedLife();
+            useDelegate.CapturedVariableRunsDifferentlyInCSharpVersions();
         }
     }
 }
