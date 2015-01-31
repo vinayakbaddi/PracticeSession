@@ -13,10 +13,13 @@ namespace PracticeSession
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+
+            //routes.MapRoute("Custom", "{Results}/{id}", new { controller = "CustomURLRouting", action = "HandleResults", id = UrlParameter.Optional, anotherId = UrlParameter.Optional });
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "SignalRChat", action = "Chat", id = UrlParameter.Optional, myId = "dud"}
+                defaults: new { controller = "SignalRChat", action = "Chat", id = UrlParameter.Optional}
             );
         }
     }

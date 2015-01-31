@@ -13,6 +13,15 @@ namespace WebApplication
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            routes.MapRoute("CustomASPX", "{AspxResults}.aspx/{id}/{anotherId}", new { controller = "CustomURLRouting", action = "HandleAspxResults", id = UrlParameter.Optional, anotherId = UrlParameter.Optional });
+
+            routes.MapRoute("CustomArray", "{Results}/{id}", new { controller = "CustomURLRouting", action = "Array", id = UrlParameter.Optional});
+
+            routes.MapRoute("Custom", "{Results}/{id}/{anotherId}", new { controller = "CustomURLRouting", action = "HandleResults", id = UrlParameter.Optional, anotherId = UrlParameter.Optional });
+
+            
+
+            
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

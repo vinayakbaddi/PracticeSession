@@ -90,7 +90,7 @@ namespace ConsoleApplication.LINQ
 
             Console.WriteLine(shortList.Sum(x=>(short)x)); // Doesn't work unless converted
 
-            //var printDataWithDelegates = shortList(delegate(x) { Console.WriteLine(x) });
+            //var printDataWithDelegates = shortList(x=> delegate(x) { Console.WriteLine(x) };);
 
             Console.WriteLine(intList.Sum()); 
         }
