@@ -71,6 +71,9 @@ namespace ConsoleApplication.OOPS
     {
         private int AVariableA = 1;
 
+        public int PubAVariableA = 1;
+
+
         public A()
         {
             System.Console.WriteLine("From A's Constructor");
@@ -90,6 +93,7 @@ namespace ConsoleApplication.OOPS
     class B : A
     {
         private int BVariableA = 10;
+        public int PubBVariableA = 10;
 
         public B()
         {
@@ -120,7 +124,14 @@ namespace ConsoleApplication.OOPS
         {
             Object object1 = new Object();
             A a = new A();
+            Console.WriteLine(">>> A value from b is {0}", a.PubAVariableA);
+
+            a.PubAVariableA = 3;
             B b = new B();
+            Console.WriteLine(">>> A value from b is {0}", b.PubAVariableA);
+            b.PubAVariableA = 30;
+            Console.WriteLine(">>> A value from b after change is {0}", b.PubAVariableA);
+
 
             //Error	1	Cannot implicitly convert type 'ConsoleApplication.OOPS.A' to 'ConsoleApplication.OOPS.B'. An explicit conversion exists (are you missing a cast?)	
             //B b2 = new A();

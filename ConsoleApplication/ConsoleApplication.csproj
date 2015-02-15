@@ -46,11 +46,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ASSIGNMENTS\ideone_0t2h2h.cs" />
+    <Compile Include="C Sharp\6.0\Indexers.cs" />
     <Compile Include="DataStructures\InBuiltStructures.cs" />
     <Compile Include="Delegates\DelegateExample.cs" />
     <Compile Include="LINQ\Classes.cs" />
     <Compile Include="ListPlay.cs" />
     <Compile Include="Logic.cs" />
+    <Compile Include="Memory\PlayWithMemory.cs" />
     <Compile Include="Methods\ExtensionMethods.cs" />
     <Compile Include="Methods\PartialMethod.cs" />
     <Compile Include="OOPS\ILockAdaptor.cs" />
@@ -69,6 +71,7 @@
     <None Include="app.config" />
     <None Include="ASSIGNMENTS\confman.zip" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

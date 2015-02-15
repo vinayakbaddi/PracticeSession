@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ConsoleApplication
 {
-    public static class StringPlay
+    public class StringPlay
     {
         public static void StringNull()
         {
@@ -81,6 +81,33 @@ namespace ConsoleApplication
             }
         }
 
+        public static string GetReverseString(string stringToBeReversed)
+        {
+            var charac = stringToBeReversed.Reverse();
+            StringBuilder stringB = new StringBuilder();
+            foreach (var d in charac)
+                stringB.Append(d);
+
+            return stringB.ToString();
+        }
+
+        public static void GetReverseStringLinq(string stringToBeReversed)
+        {
+            var charac = from da in stringToBeReversed.Reverse()
+                         select da.ToString();
+            
+
+            
+        }
+
+
+        public static void Execute()
+        {
+            Console.WriteLine("Running");
+            Console.WriteLine(GetReverseString("Text ME"));
+
+            GetReverseStringLinq("DDREv");
+        }
 
 
     }

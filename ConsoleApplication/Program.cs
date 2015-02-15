@@ -7,6 +7,8 @@ using ConsoleApplication.OOPS;
 using ConsoleApplication.Threading;
 using ConsoleApplication.Methods;
 using ConsoleApplication.Delegates;
+using ConsoleApplication.Memory;
+using ConsoleApplication.C_Sharp._6._0;
 
 namespace ConsoleApplication
 {
@@ -14,11 +16,14 @@ namespace ConsoleApplication
     {
         static void Main(string[] args)
         {
+            //StringPlay.Execute();
+            Indexers.Execute();
+            //PlayWithMemory.Execute();
             //Oops();
             //Overloading();
             //TypeCasting();
             //LinqPlay();
-            ExecuteExtension.ExecuteMethod();
+            //ExecuteExtension.ExecuteMethod();
             //DelegateExample.RunExample();
             System.Console.ReadKey();
         }
@@ -46,8 +51,8 @@ namespace ConsoleApplication
         public static void TypeCasting()
         {
             TypeCasting typeCasting = new TypeCasting();
-            //typeCasting.Run();
-            typeCasting.AbstracPractise();
+            typeCasting.Run();
+            //typeCasting.AbstracPractise();
         }
 
         public static void Overloading() { 
