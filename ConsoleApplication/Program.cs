@@ -9,6 +9,7 @@ using ConsoleApplication.Methods;
 using ConsoleApplication.Delegates;
 using ConsoleApplication.Memory;
 using ConsoleApplication.C_Sharp._6._0;
+using ConsoleApplication.C_Sharp._4._0;
 
 namespace ConsoleApplication
 {
@@ -17,7 +18,8 @@ namespace ConsoleApplication
         static void Main(string[] args)
         {
             //StringPlay.Execute();
-            Indexers.Execute();
+            //Indexers.Execute();
+            UsingTuple.ExecuteTuples();
             //PlayWithMemory.Execute();
             //Oops();
             //Overloading();
