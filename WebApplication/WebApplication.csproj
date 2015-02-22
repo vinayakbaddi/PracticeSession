@@ -201,6 +201,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\TestArea\TestAreaAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CustomURLRoutingController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -228,6 +229,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Areas\TestArea\Views\web.config" />
     <None Include="Properties\PublishProfiles\0ec187d4-0ee0-4-231-b9ee - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\0ec187d4-0ee0-4-231-b9ee - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-2.1.3.intellisense.js" />
@@ -257,7 +259,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Views\Web.config" />
-    <Content Include="Views\_ViewStart.cshtml" />
+    <None Include="Views\_ViewStart.dcshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
@@ -277,6 +279,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\TestArea\Controllers\" />
+    <Folder Include="Areas\TestArea\Models\" />
+    <Folder Include="Areas\TestArea\Views\Shared\" />
     <Folder Include="Views\HtmlProduct\" />
     <Folder Include="Views\Products\" />
   </ItemGroup>
