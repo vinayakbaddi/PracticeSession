@@ -50,6 +50,7 @@
     <Compile Include="C Sharp\6.0\Indexers.cs" />
     <Compile Include="DataStructures\InBuiltStructures.cs" />
     <Compile Include="Delegates\DelegateExample.cs" />
+    <Compile Include="Delegates\EventAndDelegates.cs" />
     <Compile Include="LINQ\Classes.cs" />
     <Compile Include="ListPlay.cs" />
     <Compile Include="Logic.cs" />
