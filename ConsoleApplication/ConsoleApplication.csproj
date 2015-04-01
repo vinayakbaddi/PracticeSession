@@ -51,6 +51,7 @@
     <Compile Include="DataStructures\InBuiltStructures.cs" />
     <Compile Include="Dates\Dates.cs" />
     <Compile Include="Delegates\DelegateExample.cs" />
+    <Compile Include="Delegates\EventAndDelegates.cs" />
     <Compile Include="LINQ\Classes.cs" />
     <Compile Include="ListPlay.cs" />
     <Compile Include="Logic.cs" />

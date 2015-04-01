@@ -12,6 +12,11 @@ namespace ConsoleApplication.Threading
 
     public class TaskExample
     {
+        public void runMe()
+        {
+            Console.WriteLine("data");
+        }
+
         public static void Execute()
         {
             Task task = Task.Factory.StartNew(() =>
@@ -22,6 +27,8 @@ namespace ConsoleApplication.Threading
                 Console.WriteLine("Finished at {0} the loop ", ctr);
             });
             task.Wait();
+
+            //Task.Factory.StartNew(()=>)
         }
     }
 }
