@@ -10,16 +10,17 @@ using ConsoleApplication.Delegates;
 using ConsoleApplication.Memory;
 using ConsoleApplication.C_Sharp._6._0;
 using ConsoleApplication.C_Sharp._4._0;
-
+using ConsoleApplication.Dates;
 namespace ConsoleApplication
 {
     class Program
     {
         static void Main(string[] args)
         {
+            Dates.Dates.Execute();
             //StringPlay.Execute();
             //Indexers.Execute();
-            UsingTuple.ExecuteTuples();
+            //UsingTuple.ExecuteTuples();
             //PlayWithMemory.Execute();
             //Oops();
             //Overloading();
