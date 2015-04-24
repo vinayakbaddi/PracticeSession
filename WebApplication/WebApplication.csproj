@@ -203,6 +203,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CustomURLRoutingController.cs" />
+    <Compile Include="Controllers\FiltersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UIController.cs" />
     <Compile Include="Global.asax.cs">
@@ -216,6 +217,9 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AngularJSRough\AngAppModule.js" />
+    <Content Include="AngularJSRough\AngularController.js" />
+    <Content Include="AngularJSRough\MyAngular.html" />
     <Content Include="AngularJS\index.html" />
     <Content Include="AngularJS\app.js" />
     <Content Include="AngularJS\main.ctrl.js" />
@@ -286,6 +290,7 @@
     <Folder Include="Areas\TestArea\Controllers\" />
     <Folder Include="Areas\TestArea\Models\" />
     <Folder Include="Areas\TestArea\Views\Shared\" />
+    <Folder Include="Views\Filters\" />
     <Folder Include="Views\HtmlProduct\" />
     <Folder Include="Views\Products\" />
   </ItemGroup>

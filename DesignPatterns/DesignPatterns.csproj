@@ -63,7 +63,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Strategy\" />
+    <Folder Include="Behavioral\Strategy\" />
+    <Folder Include="Structural\Adapter\" />
+    <Folder Include="Structural\Decorator\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Creational\AbstractFactory\UMLAbstractFactory.gif" />

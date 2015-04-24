@@ -29,5 +29,16 @@ namespace ConsoleApplication.DataStructures
         //Provides functionality to evaluate queries against a specific data source
         //wherein the type of the data is not specified.
         System.Linq.IQueryable queryable; // Implements IEnumerable
+
+        // Summary:
+        //     Represents a non-generic collection of objects that can be individually accessed
+        //     by index.
+        System.Collections.IList iList;
+
+        // Summary:
+        //     Represents a strongly typed list of objects that can be accessed by index.
+        //     Provides methods to search, sort, and manipulate lists.
+        //
+        System.Collections.Generic.List<T> myList;
     }
 }
