@@ -39,6 +39,95 @@ namespace ConsoleApplication.Dates
 
         }
 
+
+        public static void FrequencyFallingThisWeek(DateTime startDate, DateTime endDate)
+        {
+            int WeeklyDays = 4; // Working Days
+
+            var weeks = new List<Tuple<DateTime, DateTime>>();
+            
+            DateTime weekStartDate = DateTime.Now;
+
+            if (weekStartDate < startDate)
+                return;
+
+            DateTime weekEndDate = DateTime.Now;
+
+            while(weekEndDate.DayOfWeek != DayOfWeek.Friday)
+                weekEndDate = weekEndDate.AddDays(1);
+
+            if (startDate < weekEndDate && startDate.AddDays(5) >= weekEndDate)
+                return;
+
+            for (var date = weekStartDate; date <= endDate && date <= weekEndDate; date = date.AddDays(1))
+            {
+                if (date == weekStartDate)
+                {
+                    var start = (int)date.DayOfWeek;
+                    if (start == 0 || start == 6)
+                        continue;
+                    var target = (int)DayOfWeek.Friday;
+                    if (target < start)
+                        target += WeeklyDays;
+                    weeks.Add(Tuple.Create(date, date.AddDays(target - start)));
+                }
+                else if (date.DayOfWeek == DayOfWeek.Monday)
+                {
+                    if (date.AddDays(WeeklyDays) > endDate)
+                        weeks.Add(Tuple.Create(date, date.AddDays((endDate - date).TotalDays)));
+                    else
+                        weeks.Add(Tuple.Create(date, date.AddDays(WeeklyDays)));
+                }
+            }
+            foreach (var week in weeks)
+                Console.WriteLine("Start Date {0} End Date {1}", week.Item1, week.Item2);
+
+        }
+
+        public static void FrequencyFallingNextWeek(DateTime startDate, DateTime endDate)
+        {
+            int WeeklyDays = 4; // Working Days
+
+            var weeks = new List<Tuple<DateTime, DateTime>>();
+            DayOfWeek startOfTriggerDay = DayOfWeek.Friday;
+            DateTime weekStartDate = DateTime.Now;
+
+            while (weekStartDate.DayOfWeek != startOfTriggerDay)
+                weekStartDate=weekStartDate.AddDays(1);
+
+            weekStartDate = weekStartDate.AddDays(3);
+
+            if (weekStartDate < startDate)
+                return;
+
+            DateTime weekEndDate = weekStartDate.AddDays(5);
+
+            
+            for (var date = weekStartDate; date <= endDate && date<=weekEndDate; date = date.AddDays(1))
+            {
+                if (date == weekStartDate)
+                {
+                    var start = (int)date.DayOfWeek;
+                    if (start == 0 || start == 6)
+                        continue;
+                    var target = (int)DayOfWeek.Friday;
+                    if (target < start)
+                        target += WeeklyDays;
+                    weeks.Add(Tuple.Create(date, date.AddDays(target - start)));
+                }
+                else if (date.DayOfWeek == DayOfWeek.Monday)
+                {
+                    if (date.AddDays(WeeklyDays) > endDate)
+                        weeks.Add(Tuple.Create(date, date.AddDays((endDate - date).TotalDays)));
+                    else
+                        weeks.Add(Tuple.Create(date, date.AddDays(WeeklyDays)));
+                }
+            }
+            foreach (var week in weeks)
+                Console.WriteLine("Start Date {0} End Date {1}", week.Item1, week.Item2);
+
+        }
+
         public static void BiWeekly(DateTime startDate, DateTime endDate)
         {
             int biWeeklyDays = 11; // Working Days
@@ -117,11 +206,24 @@ namespace ConsoleApplication.Dates
 
         public static void Execute()
         {
-            Weekly(new DateTime(2015,1,1),new DateTime(2015,1,21));
-            Console.WriteLine("\n");
-            BiWeekly(new DateTime(2015, 1, 1), new DateTime(2015, 1, 21));
-            Console.WriteLine("\n");
-            Monthly(new DateTime(2015, 1, 1), new DateTime(2015, 3, 21));
+            Console.WriteLine("Weekly \n");
+
+            FrequencyFallingThisWeek(DateTime.Now, DateTime.Now.AddDays(30));
+
+            Console.WriteLine("NExt Weekly \n");
+            FrequencyFallingNextWeek(DateTime.Now.AddDays(5), DateTime.Now.AddDays(30));
+
+            //Weekly(new DateTime(2015,1,1),new DateTime(2015,1,21));
+            //Console.WriteLine("\n");
+            //Weekly(DateTime.Now, new DateTime(2015, 5, 31));
+            //Console.WriteLine("\n");
+
+            //Console.WriteLine("Bi Weekly \n");
+            //BiWeekly(new DateTime(2015, 1, 1), new DateTime(2015, 1, 21));
+            //Console.WriteLine("\n");
+
+            //Console.WriteLine("Monthly\n");
+            //Monthly(new DateTime(2015, 1, 1), new DateTime(2015, 3, 21));
         }
     }
 }

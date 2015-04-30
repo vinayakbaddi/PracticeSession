@@ -39,6 +39,6 @@ namespace ConsoleApplication.DataStructures
         //     Represents a strongly typed list of objects that can be accessed by index.
         //     Provides methods to search, sort, and manipulate lists.
         //
-        System.Collections.Generic.List<T> myList;
+        //System.Collections.Generic.List<T> myList;
     }
 }
