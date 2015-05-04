@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -56,7 +57,11 @@ namespace ConsoleApplication.Dates
             while(weekEndDate.DayOfWeek != DayOfWeek.Friday)
                 weekEndDate = weekEndDate.AddDays(1);
 
-            if (startDate < weekEndDate && startDate.AddDays(5) >= weekEndDate)
+            var startDayWeek = CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(startDate, CalendarWeekRule.FirstFourDayWeek, DayOfWeek.Monday);
+
+            var weekStartDayWeek = CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(weekStartDate, CalendarWeekRule.FirstFourDayWeek, DayOfWeek.Monday);
+
+            if (startDayWeek!=weekStartDayWeek)
                 return;
 
             for (var date = weekStartDate; date <= endDate && date <= weekEndDate; date = date.AddDays(1))
@@ -208,7 +213,7 @@ namespace ConsoleApplication.Dates
         {
             Console.WriteLine("Weekly \n");
 
-            FrequencyFallingThisWeek(DateTime.Now, DateTime.Now.AddDays(30));
+            FrequencyFallingThisWeek(DateTime.Now.AddDays(-3), DateTime.Now.AddDays(30));
 
             Console.WriteLine("NExt Weekly \n");
             FrequencyFallingNextWeek(DateTime.Now.AddDays(5), DateTime.Now.AddDays(30));
