@@ -33,6 +33,8 @@ namespace WebApplication
             //   appSecret: "");
 
             //app.UseGoogleAuthentication();
+
+            app.MapSignalR();
         }
     }
 }
