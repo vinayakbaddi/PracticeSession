@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 
 namespace ConsoleApplication.DataStructures
 {
@@ -15,7 +16,7 @@ namespace ConsoleApplication.DataStructures
         private System.Collections.Generic.LinkedList<int> myLinkedList;
     }
 
-    class ExplaingCollections
+    class ExplaningCollections
     {
         //Exposes an enumerator, which supports a simple iteration over a non-generic
         System.Collections.IEnumerable enumerable; //IEnumerator GetEnumerator();
@@ -40,5 +41,13 @@ namespace ConsoleApplication.DataStructures
         //     Provides methods to search, sort, and manipulate lists.
         //
         //System.Collections.Generic.List<T> myList;
+
+        public void Verify()
+        {
+            ArrayList arrayList = new ArrayList();
+            arrayList.Add(new InBuiltStructures());
+
+            arrayList.Add(new ExplaningCollections());
+        }
     }
 }
