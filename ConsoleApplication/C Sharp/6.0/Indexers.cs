@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication.C_Sharp._6._0
 {
-    //Indexers are a syntactic convenience that enable you to create a class, struct, or interface that client applications can access just as an array. Indexers are most frequently implemented in types whose primary purpose is to encapsulate an internal collection or array.
-    
+    /// <summary>
+    /// //Indexers are a syntactic convenience that enable you to create a class, struct, or interface that 
+    ///client applications can access just as an array. 
+    ///Indexers are most frequently implemented in types whose primary purpose is to 
+    ///encapsulate an internal collection or array.
+    /// </summary>
     public class Indexers
     {
         private float[] temp = new float[3] { 34.2F, 55.2F, 57.4F };
@@ -21,7 +25,7 @@ namespace ConsoleApplication.C_Sharp._6._0
             }
         }
 
-        //An indexer value is not classified as a variable; therefore, you cannot pass an indexer value as a ref or out parameter.
+        ///An indexer value is not classified as a variable; therefore, you cannot pass an indexer value as a ref or out parameter.
         public float this[int index]// Indexer declaration
         {
             get

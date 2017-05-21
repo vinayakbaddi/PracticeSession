@@ -21,7 +21,7 @@ namespace WebApplication
 
             //routes.MapRoute("Custom", "{Results}/{id}/{anotherId}", new { controller = "CustomURLRouting", action = "HandleResults", id = UrlParameter.Optional, anotherId = UrlParameter.Optional });
 
-            routes.MapRoute(name: "Default", url: "{controller}/{action}/{id}", defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional });
+            //routes.MapRoute(name: "Default", url: "{controller}/{action}/{id}", defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional });
             
             //routes.MapRoute(
             //    name: "Default",

@@ -17,9 +17,9 @@ namespace ConsoleApplication
     {
         static void Main(string[] args)
         {
-            Dates.Dates.Execute();
+            //Dates.Dates.Execute();
             //StringPlay.Execute();
-            //Indexers.Execute();
+            Indexers.Execute();
             //UsingTuple.ExecuteTuples();
             //PlayWithMemory.Execute();
             //Oops();
