@@ -34,7 +34,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject />
+    <StartupObject>ConsoleApplication.ExceptionHandling.TheTryCatchExit</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -53,6 +53,7 @@
     <Compile Include="Dates\Dates.cs" />
     <Compile Include="Delegates\DelegateExample.cs" />
     <Compile Include="Delegates\EventAndDelegates.cs" />
+    <Compile Include="ExceptionHandling\TheTryCatchExit.cs" />
     <Compile Include="LINQ\Classes.cs" />
     <Compile Include="ListPlay.cs" />
     <Compile Include="Logic.cs" />
