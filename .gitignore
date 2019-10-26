@@ -152,3 +152,7 @@ $RECYCLE.BIN/
 
 # Mac desktop service store files
 .DS_Store
+/.vs/PracticeSession/v16/Server/sqlite3/db.lock
+/.vs/PracticeSession/v16/Server/sqlite3/storage.ide-wal
+/.vs/PracticeSession/v16/Server/sqlite3/storage.ide-shm
+/.vs/PracticeSession/v16/Server/sqlite3/storage.ide
