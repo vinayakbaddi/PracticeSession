@@ -16,7 +16,7 @@ namespace ConsoleApplication.DataStructures
         private System.Collections.Generic.LinkedList<int> myLinkedList;
     }
 
-    class ExplaningCollections
+    class ExplaningCollections<T>
     {
         //Exposes an enumerator, which supports a simple iteration over a non-generic
         System.Collections.IEnumerable enumerable; //IEnumerator GetEnumerator();
@@ -40,14 +40,14 @@ namespace ConsoleApplication.DataStructures
         //     Represents a strongly typed list of objects that can be accessed by index.
         //     Provides methods to search, sort, and manipulate lists.
         //
-        //System.Collections.Generic.List<T> myList;
+        System.Collections.Generic.List<T> myList;
 
         public void Verify()
         {
             ArrayList arrayList = new ArrayList();
             arrayList.Add(new InBuiltStructures());
 
-            arrayList.Add(new ExplaningCollections());
+            arrayList.Add(new ExplaningCollections<InBuiltStructures>());
         }
     }
 }

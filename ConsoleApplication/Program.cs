@@ -11,15 +11,18 @@ using ConsoleApplication.Memory;
 using ConsoleApplication.C_Sharp._6._0;
 using ConsoleApplication.C_Sharp._4._0;
 using ConsoleApplication.Dates;
+using ConsoleApplication.ExceptionHandling;
+
 namespace ConsoleApplication
 {
     class Program
     {
         static void Main(string[] args)
         {
+            TheTryCatchExit.Main();
             //Dates.Dates.Execute();
             //StringPlay.Execute();
-            Indexers.Execute();
+            //Indexers.Execute();
             //UsingTuple.ExecuteTuples();
             //PlayWithMemory.Execute();
             //Oops();

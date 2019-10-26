@@ -14,15 +14,16 @@ namespace ConsoleApplication.ExceptionHandling
             try
             {
                 System.Console.WriteLine("HERE at Try start");
+                System.Console.ReadLine();
                 Environment.Exit(Environment.ExitCode);
-                System.Console.WriteLine("HERE at Try End");
+                System.Console.WriteLine("HERE at Try End"); //This will not execute
                 System.Console.ReadLine();
 
             }
             catch (Exception ex) { }
             finally
             {
-                System.Console.WriteLine("HERE at FInally");
+                System.Console.WriteLine("HERE at FInally"); //This will not execute
                 System.Console.ReadLine();
 
 
