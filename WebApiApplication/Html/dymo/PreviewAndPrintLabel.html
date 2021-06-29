@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>DYMO Label Framework JavaScript Library Samples: Preview and Print Label</title>
+    <link rel="stylesheet" type="text/css" href="PreviewAndPrintLabel.css" />
+    <script src="http://labelwriter.com/software/dls/sdk/js/dymo.connect.framework.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="PreviewAndPrintLabel.js" type="text/javascript" charset="UTF-8"></script>
+</head>
+
+<body>
+
+
+    <div class="top">
+        <div class="left">
+            <div id="labelFileSelection" style="visibility:hidden">
+                <label for="labelFile">Select label file with address object: </label>
+                <input type="file" id="labelFile" name="labelFile" />
+            </div>
+
+            <div id="addressDiv">
+                <label for="acbsName">ACBS Name </label><br />
+                <!--<textarea name="acbsName" id="acbsName" rows='5' cols='40'> </textarea>-->
+                <input type="text" name="acbsName" id="acbsName" />
+            </div>
+            <div id="addressNo">
+                <label for="acbsNo">ACBS No:</label><br />
+                <!--<textarea name="acbsNo" id="acbsNo" rows='1' cols='40'>
+                </textarea>-->
+                <input type="text" name="acbsNo" id="acbsNo" />
+
+            </div>
+        </div>
+
+        <div class="content">
+            <div id="labelImageDiv">
+                <img id="labelImage" src="" alt="label preview" />
+            </div>
+
+            <div class="printControls">
+                <div id="printersDiv">
+                    <label for="printersSelect">Printer:</label>
+                    <select id="printersSelect"></select>
+                </div>
+
+                <div id="printDiv">
+                    <button id="printButton">Print</button>
+                    <!--            <a id="printButton"><img src="" alt=""/>Print</a>-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
