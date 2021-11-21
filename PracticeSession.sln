@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2018
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticeSession", "PracticeSession\PracticeSession.csproj", "{40646B2A-2032-4B77-BB55-721B958FD182}"
 EndProject
@@ -25,9 +25,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiApplication", "WebApi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiApplication.Tests", "WebApiApplication.Tests\WebApiApplication.Tests.csproj", "{5FC80113-CFD4-4A4F-9F19-98DD575B5BED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryForTestCase", "LibraryForTestCase\LibraryForTestCase.csproj", "{C8BC3B14-AFF3-4EA8-BA4D-28812C6F9128}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryForTestCase", "LibraryForTestCase\LibraryForTestCase.csproj", "{C8BC3B14-AFF3-4EA8-BA4D-28812C6F9128}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestLibraryForTestCase", "TestLibraryForTestCase\TestLibraryForTestCase.csproj", "{8C05B8A9-5E13-4277-B19D-95F53510E33E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aspose", "Aspose\Aspose.csproj", "{574DDB3A-2658-4AA9-B65F-0E6EEB17C30C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -173,6 +175,18 @@ Global
 		{8C05B8A9-5E13-4277-B19D-95F53510E33E}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{8C05B8A9-5E13-4277-B19D-95F53510E33E}.Release|x86.ActiveCfg = Release|Any CPU
 		{8C05B8A9-5E13-4277-B19D-95F53510E33E}.Release|x86.Build.0 = Release|Any CPU
+		{574DDB3A-2658-4AA9-B65F-0E6EEB17C30C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{574DDB3A-2658-4AA9-B65F-0E6EEB17C30C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{574DDB3A-2658-4AA9-B65F-0E6EEB17C30C}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{574DDB3A-2658-4AA9-B65F-0E6EEB17C30C}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{574DDB3A-2658-4AA9-B65F-0E6EEB17C30C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{574DDB3A-2658-4AA9-B65F-0E6EEB17C30C}.Debug|x86.Build.0 = Debug|Any CPU
+		{574DDB3A-2658-4AA9-B65F-0E6EEB17C30C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{574DDB3A-2658-4AA9-B65F-0E6EEB17C30C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{574DDB3A-2658-4AA9-B65F-0E6EEB17C30C}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{574DDB3A-2658-4AA9-B65F-0E6EEB17C30C}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{574DDB3A-2658-4AA9-B65F-0E6EEB17C30C}.Release|x86.ActiveCfg = Release|Any CPU
+		{574DDB3A-2658-4AA9-B65F-0E6EEB17C30C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

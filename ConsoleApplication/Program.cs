@@ -12,6 +12,7 @@ using ConsoleApplication.C_Sharp._6._0;
 using ConsoleApplication.C_Sharp._4._0;
 using ConsoleApplication.Dates;
 using ConsoleApplication.ExceptionHandling;
+using ConsoleApplication.DataStructures;
 
 namespace ConsoleApplication
 {
@@ -19,7 +20,8 @@ namespace ConsoleApplication
     {
         static void Main(string[] args)
         {
-            TheTryCatchExit.Main();
+            ListNodeAddNumbers.run();
+            //TheTryCatchExit.Main();
             //Dates.Dates.Execute();
             //StringPlay.Execute();
             //Indexers.Execute();

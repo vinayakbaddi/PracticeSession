@@ -20,6 +20,8 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -145,10 +147,20 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="Global.asax" />
+    <Content Include="Html\dymo\PreviewAndPrintLabel.css" />
+    <Content Include="Html\dymo\PreviewAndPrintLabel.html" />
+    <Content Include="Html\dymo\PreviewAndPrintLabel.js" />
+    <Content Include="Html\dymo\PrintButtonDisabled.png" />
+    <Content Include="Html\dymo\PrintButtonHover.png" />
+    <Content Include="Html\dymo\PrintButtonNormal.png" />
+    <Content Include="Html\dymo\PrintButtonPressed.png" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\angular.min.js.map" />
+    <Content Include="Html\dymo\MyLabel.dymo" />
+    <Content Include="Html\dymo\PreviewLabelFramework.dymo" />
+    <Content Include="Html\dymo\PreviewLabelFramework.label" />
     <None Include="Scripts\jquery-2.1.3.intellisense.js" />
     <Content Include="Scripts\app\angularLogic.js" />
     <Content Include="Scripts\jquery-2.1.3.js" />
