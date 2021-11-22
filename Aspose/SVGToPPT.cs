@@ -1,5 +1,6 @@
-﻿using Aspose.Pdf;
+﻿//using Aspose.Pdf;
 using Aspose.Slides;
+using Aspose.Slides.Export;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -29,7 +30,7 @@ namespace Aspose
                 ISvgImage svgImage = new SvgImage(svgContent);
                 IPPImage ppImage = p.Images.AddImage(svgImage);
                 p.Slides[0].Shapes.AddPictureFrame(ShapeType.Rectangle, 0, 0, ppImage.Width, ppImage.Height, ppImage);
-                p.Save(@"C:\Users\vinay\source\repos\PracticeSession\Aspose\img\stats", (Slides.Export.SaveFormat)SaveFormat.Pptx);
+                p.Save(@"C:\Users\vinay\source\repos\PracticeSession\Aspose\img\stats4.pptx", (Slides.Export.SaveFormat)SaveFormat.Pptx);
             }
         }
     }

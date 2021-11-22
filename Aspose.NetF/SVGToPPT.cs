@@ -1,0 +1,37 @@
+﻿using Aspose.Slides;
+using Aspose.Slides.Export;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Aspose.NetF
+{
+    public class SVGToPPT
+    {
+        public static void run()
+        {
+            convert();
+        }
+
+        private static void convert()
+        {
+            // load SVG file with an instance of Document class
+            //Document document = new Document(@"C:\Users\vinay\source\repos\PracticeSession\Aspose\img\stats.svg");
+            //// save SVG as a PPTX 
+            //document.Save("PptxOutput.pptx", SaveFormat.Pptx);
+
+            using (var p = new Presentation())
+            {
+                string svgContent = File.ReadAllText(@"C:\Users\vinay\source\repos\PracticeSession\Aspose.NetF\img\stats.svg");
+                ISvgImage svgImage = new SvgImage(svgContent);
+                IPPImage ppImage = p.Images.AddImage(svgImage);
+                p.Slides[0].Shapes.AddPictureFrame(ShapeType.Rectangle, 0, 0, ppImage.Width, ppImage.Height, ppImage);
+                p.Save(@"C:\Users\vinay\source\repos\PracticeSession\Aspose.NetF\img\stats4.pptx", SaveFormat.Pptx);
+
+            }
+        }
+    }
+}
