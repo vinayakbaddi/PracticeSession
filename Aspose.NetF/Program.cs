@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Aspose.NetF.Word;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,8 @@ namespace Aspose.NetF
     {
         static void Main(string[] args)
         {
-            SVGToPPT.run();
+            //SVGToPPT.run();
+            WordImageInsert.run();
             Console.Read();
         }
     }
