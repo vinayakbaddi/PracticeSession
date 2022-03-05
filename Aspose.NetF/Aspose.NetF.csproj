@@ -39,6 +39,9 @@
     <Reference Include="Aspose.Slides, Version=20.12.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
       <HintPath>..\packages\Aspose.Slides.NET.20.12.0\lib\net4.0-client\Aspose.Slides.dll</HintPath>
     </Reference>
+    <Reference Include="Aspose.Words, Version=21.1.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\packages\Aspose.Words.21.1.0\lib\net40\Aspose.Words.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -53,16 +56,21 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SVGToPPT.cs" />
+    <Compile Include="Word\WordImageInsert.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="img\stats" />
     <None Include="img\stats.pptx" />
     <None Include="packages.config" />
+    <None Include="Word\files\InsertImg.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="img\masking-path-04-b.svg" />
     <Content Include="img\stats.svg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
