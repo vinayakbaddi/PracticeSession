@@ -51,7 +51,8 @@ namespace Aspose.NetF.Word
             Shape shape = builder.InsertImage(@"C:\Users\vinay\source\repos\PracticeSession\Aspose.NetF\Word\files\image.jpg");
             para.AppendChild(shape);
             //para.In
-            //builder.InsertBreak(BreakType.PageBreak);
+            //builder.PageSetup = doc.pag
+            builder.InsertBreak(BreakType.PageBreak);
             //builder.InsertImage(@"C:\Users\vinay\source\repos\PracticeSession\Aspose.NetF\Word\files\image.jpg", 700,700);
             //var ran = doc.Range;
             // Replaces all 'sad' and 'mad' occurrences with 'bad'.
