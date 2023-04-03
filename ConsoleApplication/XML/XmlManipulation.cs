@@ -16,7 +16,53 @@ namespace ConsoleApplication.XML
         {
             //another();
             //t2();
-            xn();
+            //xn();
+            overlay2();
+        }
+
+        private static void overlay2()
+        {
+            XDocument sourceDoc = XDocument.Load(@"C:\Users\vinay\source\repos\PracticeSession\ConsoleApplication\XML\data\x1.xml");
+            XDocument updateDoc = XDocument.Load(@"C:\Users\vinay\source\repos\PracticeSession\ConsoleApplication\XML\data\x2.xml");
+            XDocument master = XDocument.Load(@"C:\Users\vinay\source\repos\PracticeSession\ConsoleApplication\XML\data\x1.xml");
+
+            var updateElements = updateDoc.Root.Elements().Where(e => e.Attribute("name") != null);
+            var s = sourceDoc.Root.Elements().Where(e => e.Attribute("name") != null);
+            foreach (var element in s)
+            {
+
+                var matchingUpdateElement = updateElements.Where(e=> e.Attribute("name").Value.Equals(element.Attribute("name").Value, StringComparison.InvariantCultureIgnoreCase));
+
+                if (matchingUpdateElement != null && matchingUpdateElement.Count() > 0)
+                {
+                    var m = master.Root.Elements().Where(e => e.Attribute("name").Value.Equals(element.Attribute("name").Value, StringComparison.InvariantCultureIgnoreCase)).FirstOrDefault();
+                    m.ReplaceWith(matchingUpdateElement);
+                    //element.ReplaceWith(matchingUpdateElement);
+                }
+            }
+
+            master.Save(@"C:\Users\vinay\source\repos\PracticeSession\ConsoleApplication\XML\data\overlayed.xml");
+
+        }
+        private static void overlay()
+        {
+            XDocument sourceDoc = XDocument.Load(@"C:\Users\vinay\source\repos\PracticeSession\ConsoleApplication\XML\data\x1.xml");
+            XDocument updateDoc = XDocument.Load(@"C:\Users\vinay\source\repos\PracticeSession\ConsoleApplication\XML\data\x2.xml");
+
+            var updateElements = updateDoc.Root.Elements().Where(e => e.Attribute("name") != null);
+            var s = sourceDoc.Root.Elements().Where(e => e.Attribute("name") != null);
+            foreach (var element in sourceDoc.Root.Elements().Where(e => e.Attribute("name") != null))
+            {
+                var matchingUpdateElement = updateElements.FirstOrDefault(e => e.Attribute("name") == element.Attribute("name"));
+
+                if (matchingUpdateElement != null)
+                {
+                    element.ReplaceWith(matchingUpdateElement);
+                }
+            }
+
+            sourceDoc.Save(@"C:\Users\vinay\source\repos\PracticeSession\ConsoleApplication\XML\data\overlayed.xml");
+
         }
 
         static void xn()
