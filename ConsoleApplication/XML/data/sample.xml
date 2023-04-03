@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hd:answerSet xmlns:hd="http://www.example.com/ns1" xmlns:xsi="http://www.example.com/ns2">
+  <hd:textAnswer name="deposit" >
+    <hd:value xsi:nil="true">
+    </hd:value>
+  </hd:textAnswer>
+  <hd:textAnswer>
+    <hd:value>someValue</hd:value>
+  </hd:textAnswer>
+  <hd:textAnswer name="d2">
+    <hd:repeat>
+      <hd:value xsi:nil="true"></hd:value>
+    </hd:repeat>
+  </hd:textAnswer>
+
+  <hd:textAnswer name="d3">
+    <hd:repeat>
+      <hd:repeat>
+        <hd:value xsi:nil="true"></hd:value>
+      </hd:repeat>
+    </hd:repeat>
+  </hd:textAnswer>
+  <hd:numberAnswer name="n1" >
+    <hd:value xsi:nil="true">
+    </hd:value>
+  </hd:numberAnswer>
+  <hd:textAnswer name="n2">
+    <hd:repeat>
+      <hd:repeat>
+        <hd:value xsi:nil="true"></hd:value>
+      </hd:repeat>
+    </hd:repeat>
+  </hd:textAnswer>
+
+  <hd:textAnswer>
+  </hd:textAnswer>
+
+</hd:answerSet>

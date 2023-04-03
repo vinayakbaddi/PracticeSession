@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<hd:answerSet xmlns:hd="http://s.m.com/" xmlns:xsi="http://xsi.com">
+  <hd:textAnswer name="deposit">
+    <hd:value xsi:nil="true">
+    </hd:value>
+  </hd:textAnswer>
+<hd:textAnswer name="d2">
+    <hd:value>someValue</hd:value>
+  </hd:textAnswer>
+<hd:textAnswer name="d3">
+  </hd:textAnswer>
+
+</hd:answerSet>
