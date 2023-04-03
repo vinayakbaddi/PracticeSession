@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AnswerSet>
+  <TextValue name="d1">
+    d1111
+  </TextValue>
+  <TextValue name="d2">
+    d222
+  </TextValue>
+  <TextValue name="d3">
+    d333
+  </TextValue>
+</AnswerSet>
