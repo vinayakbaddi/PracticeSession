@@ -4,6 +4,12 @@
     updated
   </TextValue> 
   <TextValue name="d3">
-    v
+    v3
+  </TextValue>
+  <TextValue name="d7">
+    v7
+  </TextValue>
+  <TextValue name="d8">
+    v8
   </TextValue>
 </AnswerSet>
