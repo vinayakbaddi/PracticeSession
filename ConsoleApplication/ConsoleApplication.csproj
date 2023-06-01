@@ -86,6 +86,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="SQL\DtabaseClone.sql" />
     <Content Include="XML\data\nodes.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
