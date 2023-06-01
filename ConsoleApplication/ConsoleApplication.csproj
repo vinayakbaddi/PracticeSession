@@ -37,9 +37,6 @@
     <StartupObject>ConsoleApplication.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Aspose.PDF, Version=20.5.0.0, Culture=neutral, PublicKeyToken=f0262d67fe233d63, processorArchitecture=MSIL">
-      <HintPath>..\packages\Aspose.PDF.20.5.0\lib\net4.0\Aspose.PDF.dll</HintPath>
-    </Reference>
     <Reference Include="Aspose.Slides, Version=20.12.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
       <HintPath>..\packages\Aspose.Slides.NET.20.12.0\lib\net4.0-client\Aspose.Slides.dll</HintPath>
     </Reference>
