@@ -37,9 +37,6 @@
     <StartupObject>ConsoleApplication.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Aspose.Slides, Version=20.12.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
-      <HintPath>..\packages\Aspose.Slides.NET.20.12.0\lib\net4.0-client\Aspose.Slides.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -80,7 +77,6 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="ASSIGNMENTS\confman.zip" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="SQL\DtabaseClone.sql" />
@@ -105,6 +101,9 @@
     <Content Include="XML\data\XmlFile.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="dll\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
