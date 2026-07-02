@@ -14,15 +14,20 @@ using ConsoleApplication.Dates;
 using ConsoleApplication.ExceptionHandling;
 using ConsoleApplication.DataStructures;
 using ConsoleApplication.XML;
+using ConsoleApplication.ASSIGNMENTS.Tu;
 
 namespace ConsoleApplication
 {
     class Program
     {
+
+
         static void Main(string[] args)
         {
+            //BaseBall.run();
+            //ActualTest.run();
             //ListNodeAddNumbers.run();
-            XmlManipulation.run();
+            //XmlManipulation.run();
             //TheTryCatchExit.Main();
             //Dates.Dates.Execute();
             //StringPlay.Execute();
@@ -31,7 +36,7 @@ namespace ConsoleApplication
             //PlayWithMemory.Execute();
             //Oops();
             //Overloading();
-            //TypeCasting();
+            TypeCasting();
             //LinqPlay();
             //ExecuteExtension.ExecuteMethod();
             //DelegateExample.RunExample();

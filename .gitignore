@@ -4,8 +4,10 @@
 # User-specific files
 *.suo
 *.user
+*.userosscache
 *.sln.docstates
 *.nupkg
+
 # Build results
 
 [Dd]ebug/
@@ -152,3 +154,24 @@ $RECYCLE.BIN/
 
 # Mac desktop service store files
 .DS_Store
+
+# Additional common ignores for SDK-style and modern .NET projects
+.vs/
+.vscode/
+.idea/
+
+# DotNet build artifacts and package caches
+**/bin/
+**/obj/
+artifacts/
+*.nupkg
+packages/
+.nuget/
+
+# Dotnet user secrets and local settings
+secrets.json
+appsettings*.json
+
+# Rider caches
+*.sln.iml
+

@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ConsoleApplication</RootNamespace>
     <AssemblyName>ConsoleApplication</AssemblyName>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -47,6 +47,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ASSIGNMENTS\ideone_0t2h2h.cs" />
+    <Compile Include="ASSIGNMENTS\Tu\ActualTest.cs" />
+    <Compile Include="ASSIGNMENTS\Tu\BaseBall.cs" />
     <Compile Include="C Sharp\4.0\UsingTuple.cs" />
     <Compile Include="C Sharp\6.0\Indexers.cs" />
     <Compile Include="DataStructures\InBuiltStructures.cs" />
