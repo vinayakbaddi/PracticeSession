@@ -66,9 +66,51 @@ namespace DesignPatterns.Creational.Singleton
         private LazySingleton() { }
 
         public void UnderHoodLaziness() {
+            //TestLockSingleton t = new TestLockSingleton();
             Console.WriteLine(lazy.Value);
             Console.WriteLine(lazy.IsValueCreated);
             Console.WriteLine(lazy.GetType());
+        }
+    }
+
+    public class TestLockSingleton
+    {
+        // A private static field to hold the single instance of the class.
+        private static TestLockSingleton _instance;
+
+        // An object for locking to ensure thread safety.
+        private static readonly object _lock = new object();
+
+        // A private constructor to prevent direct instantiation.
+        private TestLockSingleton()
+        {
+            // Initialization code here
+        }
+
+        // A public static method to get the single instance of the class.
+        public static TestLockSingleton GetInstance
+        {
+            get
+            {
+                // Double-check locking mechanism
+                if (_instance == null)
+                {
+                    lock (_lock)  // Locking to ensure that only one thread can enter this block
+                    {
+                        if (_instance == null)  // Double-checking if the instance is still null
+                        {
+                            _instance = new TestLockSingleton();
+                        }
+                    }
+                }
+                return _instance;
+            }
+        }
+
+        // Additional methods and properties of the Singleton class
+        public void DoSomething()
+        {
+            // Method implementation
         }
     }
 }
