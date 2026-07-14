@@ -51,7 +51,7 @@ public struct User
 }
 public class Program
 {
-    public static void Main(string[] args)
+    public static async Task Main(string[] args)
     {
         //var no = Console.ReadLine();
         //switch (no)
@@ -101,6 +101,14 @@ public class Program
         var v = Calculate(new[] { 10, 20, 30 });
         Console.WriteLine($"Sum: {v.sum}, Average: {v.avg}");
         Console.WriteLine($"User Name: {ss.Name} ID : {ss.Id} Salary : {ss.salary}");
+
+        await TestAsyncMethod();
+        await TestAsyncMethod2();
+
+        var t1 = TestAsyncMethod();
+        var t2 = TestAsyncMethod();
+        Task.WaitAll(t1, t2);
+        Console.WriteLine("All Async Methods Completed");
     }
 
     public static (int sum, double avg) Calculate(int[] numbers)
@@ -111,4 +119,16 @@ public class Program
     }
 
     static void TestExpressionMethod()=> Console.WriteLine("Expression Bodied Method");
+
+    public async static Task TestAsyncMethod()
+    {
+        await Task.Delay(5000);
+        Console.WriteLine("Async Method");
+    }
+
+    public async static Task TestAsyncMethod2()
+    {
+        await Task.Delay(5000);
+        Console.WriteLine("Async Method2");
+    }
 }
