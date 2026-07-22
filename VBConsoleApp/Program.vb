@@ -17,6 +17,21 @@ Module Program
         conn.Close()
 
     End Sub
+
+    Function TestMethod() As Int32
+        TestMethod = 1 * 100
+    End Function
+
+    Private pName As String
+
+    Public Property Name As String
+        Get
+            Return pName
+        End Get
+        Set(value As String)
+            pName = value
+        End Set
+    End Property
 End Module
 
 

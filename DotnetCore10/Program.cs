@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 public interface GenericClass<T> where T : struct
 {
@@ -68,6 +69,8 @@ public class Program
 
         //}
         TestExpressionMethod();
+        // LINQ join example between Employee, Department and Salary
+        TestLinqJoin();
         Console.WriteLine("Hello World!");
         User u = new User { Name = "John Doe", Id = 1, salary= 20000 };
         ImplementGenerics<User> user= new ImplementGenerics<User>();
@@ -130,5 +133,75 @@ public class Program
     {
         await Task.Delay(5000);
         Console.WriteLine("Async Method2");
+    }
+
+    // --- LINQ join example and sample data initialization ---
+    public class Employee
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public int DepartmentId { get; set; }
+    }
+
+    public class Department
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+    }
+
+    public class Salary
+    {
+        public int EmployeeId { get; set; }
+        public decimal Amount { get; set; }
+    }
+
+    static void TestLinqJoin()
+    {
+        var departments = new List<Department>
+        {
+            new Department { Id = 1, Name = "Engineering" },
+            new Department { Id = 2, Name = "HR" },
+            new Department { Id = 3, Name = "Finance" }
+        };
+
+        var employees = new List<Employee>
+        {
+            new Employee { Id = 1, Name = "Alice", DepartmentId = 1 },
+            new Employee { Id = 2, Name = "Bob", DepartmentId = 2 },
+            new Employee { Id = 3, Name = "Charlie", DepartmentId = 1 },
+            new Employee { Id = 4, Name = "Diana", DepartmentId = 3 }
+        };
+
+        var salaries = new List<Salary>
+        {
+            new Salary { EmployeeId = 1, Amount = 90000 },
+            new Salary { EmployeeId = 2, Amount = 60000 },
+            new Salary { EmployeeId = 3, Amount = 95000 },
+            new Salary { EmployeeId = 4, Amount = 70000 }
+        };
+
+        // Join Employee -> Department -> Salary
+        var employeeDetails = from e in employees
+                              join d in departments on e.DepartmentId equals d.Id
+                              join s in salaries on e.Id equals s.EmployeeId
+                              select new { e.Id, e.Name, Department = d.Name, Salary = s.Amount };
+
+        Console.WriteLine("\nEmployee - Department - Salary (joined results):");
+        foreach (var item in employeeDetails)
+        {
+            Console.WriteLine($"Id:{item.Id} Name:{item.Name} Dept:{item.Department} Salary:{item.Salary}");
+        }
+
+        // Show employees belonging to a specific department (e.g., Engineering)
+        var engineeringEmployees = from e in employees
+                                   join d in departments on e.DepartmentId equals d.Id
+                                   where d.Name == "Engineering"
+                                   select new { e.Id, e.Name, Department = d.Name };
+
+        Console.WriteLine("\nEmployees in Engineering department:");
+        foreach (var emp in engineeringEmployees)
+        {
+            Console.WriteLine($"Id:{emp.Id} Name:{emp.Name} Dept:{emp.Department}");
+        }
     }
 }

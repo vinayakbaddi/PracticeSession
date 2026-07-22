@@ -120,8 +120,27 @@ namespace ConsoleApplication.OOPS
 
     class TypeCasting
     {
+
+        public void boxing()
+        {
+            int x = 7;
+
+            object y = x;// boxing yet x is stored as int reference
+
+
+            //long z = (long)y; failes as y is boxed as int and cannot be unboxed to long
+            //long z = y as long; as can't be used with value types
+            //Console.WriteLine(z);
+            if (y is int )
+                Console.WriteLine("y");
+
+            if (y is int v && v > 0)
+                Console.WriteLine("v is " + v);
+        }
+
         public void Run()
         {
+            boxing();
             Object object1 = new Object();
             A a = new A();
             Console.WriteLine(">>> A value from b is {0}", a.PubAVariableA);
