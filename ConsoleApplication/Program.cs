@@ -36,11 +36,11 @@ namespace ConsoleApplication
             //PlayWithMemory.Execute();
             //Oops();
             //Overloading();
-            //TypeCasting();
+            TypeCasting();
             //LinqPlay();
             //ExecuteExtension.ExecuteMethod();
             //DelegateExample.RunExample();
-            LinqMethods.Run();
+            //LinqMethods.Run();
             System.Console.ReadKey();
         }
 

@@ -140,6 +140,7 @@ namespace ConsoleApplication.OOPS
 
         public void Run()
         {
+            AbstracPractise();
             boxing();
             Object object1 = new Object();
             A a = new A();

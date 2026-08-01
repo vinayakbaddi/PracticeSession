@@ -27,3 +27,15 @@ select name, salary, managerId, 1 as [Level] from Employee where managerId is nu
 union all
 select e.name, e.salary,e.managerId, eh.Level+1 from Employee e 
 inner join EmpHierarchy eh on e.managerId = eh.Id
+
+with cte as 
+(
+select nam, sal,managerId from emp
+where nam like 'A%'
+)
+select * from cte;
+
+with ct2 as(
+select nam, DENSE_RANK() over(ORDER BY salary desc) as HightSalary2 from  emp
+)
+select * from ct2 
